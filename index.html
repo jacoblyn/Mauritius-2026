@@ -119,13 +119,6 @@ main{max-width:1120px;margin:0 auto;padding:0 16px 48px}
 .korttekst{margin:10px 4px 2px;font-size:.95rem;color:var(--ink2);min-height:3em}
 .korttekst strong{color:var(--ink)}
 
-/* Booking */
-.booklist{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.booklist li{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:14px 16px}
-.booklist .bh{display:flex;gap:12px;align-items:flex-start}
-.booklist .ik{font-size:1.6rem;line-height:1}
-.booklist .bdato{font-size:.85rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.05em;margin:0}
-.booklist p{margin:.3rem 0 0;color:var(--ink2);font-size:.95rem}
 
 /* Aktiviteter */
 .akt{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:16px;margin-top:18px;scroll-margin-top:80px}
@@ -180,7 +173,6 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
  .tider{grid-template-columns:1fr 1fr}
  .tips{grid-template-columns:1fr 1fr}
  .fotogrid{grid-template-columns:1fr 1fr}
- .booklist{grid-template-columns:1fr 1fr}
  .links{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
  .akt{padding:24px}
  .props div{display:grid;grid-template-columns:10rem 1fr;gap:16px}
@@ -200,7 +192,7 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
  .herobtn,.herocredit,.menu,.optop,.kortboks,.dagvalg,.knapper,.foto,.fotogrid,.links,#idag,details.mere summary{display:none!important}
  details.mere>*{display:block}
  .blok{padding-top:12pt}
- .dag,.akt,.booklist li{break-inside:avoid;border:1px solid #bbb;box-shadow:none}
+ .dag,.akt{break-inside:avoid;border:1px solid #bbb;box-shadow:none}
  .plangrid{display:block}
  a{color:inherit;text-decoration:none}
  footer{padding:8pt}
@@ -224,7 +216,6 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
   <ul>
    <li><a href="#idag">I dag</a></li>
    <li><a href="#plan">Dag for dag</a></li>
-   <li><a href="#booking">Booking</a></li>
    <li><a href="#aktiviteter">Turene</a></li>
    <li><a href="#praktisk">Praktisk</a></li>
    <li><a href="#mad">Mad</a></li>
@@ -391,7 +382,7 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
     <p class="note bedste"><b>Til bedsteforældrene</b>Kør med som passager, eller nyd kysten i Bel Ombre imens. Turen er ujævn og kan være mudret.</p>
     <p class="note planb"><b>Hvis det regner kraftigt</b>Så bytter vi med fredag.</p>
     <p class="husk"><b>Husk:</b><span>Lukkede sko</span><span>Tøj, der må blive beskidt</span><span>Badetøj til vandfaldet</span><span>Myggespray</span></p>
-    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Frederica+Nature+Reserve+Bel+Ombre+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="tel:+2302605101">📞 Ring og book</a><a class="knap lys" href="#buggy">Læs mere</a></div>
+    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Frederica+Nature+Reserve+Bel+Ombre+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="tel:+2302605101">📞 Ring til buggyturen</a><a class="knap lys" href="#buggy">Læs mere</a></div>
    </article>
 
    <article class="dag" id="dag-8" data-m="58" data-date="2026-11-11" data-titel="Familievandretur ved Le Morne">
@@ -443,19 +434,6 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
  </div>
 </section>
 
-<section id="booking" class="blok">
- <h2>Det skal bookes</h2>
- <p class="intro">Det er højsæson i november, så book et par dage før. Tryk på et telefonnummer for at ringe.</p>
- <ul class="booklist">
-  <li><div class="bh"><span class="ik" aria-hidden="true">🎣</span><div><p class="bdato">Tor 5/11 · kl. 05:00</p><h3>Fisketur</h3><p>Bekræft afgangssted, mødetid og hvor mange der er plads til på båden.</p></div></div></li>
-  <li><div class="bh"><span class="ik" aria-hidden="true">⛵</span><div><p class="bdato">Lør 7/11</p><h3>Katamaran med Océane</h3><p>Den private tur er prissat til op til 6 personer. Bed om et tilbud til 10.</p><div class="knapper"><a class="knap lys" href="https://oceane.mu/" target="_blank" rel="noopener">oceane.mu ↗</a></div></div></div></li>
-  <li><div class="bh"><span class="ik" aria-hidden="true">⛰️</span><div><p class="bdato">Søn 8/11</p><h3>Guide til Le Morne-toppen</h3><p>Kun for friske voksne. Turen starter kl. 7.</p><div class="knapper"><a class="knap lys" href="https://mauritius-fun-tours.com/en/guides/le-morne-brabant-guided-hike/" target="_blank" rel="noopener">Sammenlign guider ↗</a></div></div></div></li>
-  <li><div class="bh"><span class="ik" aria-hidden="true">🤿</span><div><p class="bdato">Man 9/11</p><h3>Dykning hos Sundivers</h3><p>Genopfriskning og dyk til de to dykkere, og børnedyk til Hugo. Spørg om prisen på begge dele.</p><div class="knapper"><a class="knap" href="tel:+23059721504">📞 +230 5972 1504</a></div></div></div></li>
-  <li><div class="bh"><span class="ik" aria-hidden="true">🚙</span><div><p class="bdato">Tir 10/11</p><h3>Buggy i Bel Ombre</h3><p>Kl. 9:30. En buggy pr. 2 personer, og føreren skal være over 18.</p><div class="knapper"><a class="knap" href="tel:+2302605101">📞 +230 260 5101</a><a class="knap lys" href="mailto:econciergerie@heritageresorts.mu">✉️ Skriv en mail</a></div></div></div></li>
-  <li><div class="bh"><span class="ik" aria-hidden="true">🥾</span><div><p class="bdato">Ons 11/11</p><h3>Familievandretur ved Le Morne</h3><p>Explorers Mauritius, kl. 9.</p><div class="knapper"><a class="knap lys" href="https://explorersmauritius.com/services/le-morne-brabant-family-hike" target="_blank" rel="noopener">explorersmauritius.com ↗</a></div></div></div></li>
- </ul>
-</section>
-
 <section id="aktiviteter" class="blok">
  <h2>Turene</h2>
  <p class="intro">Priserne er fra udbydernes egne sider. Kronebeløbene er cirka, regnet med MUR 100 ≈ 14 kr. Står der ingen pris, har de ikke lagt den ud.</p>
@@ -465,7 +443,7 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
   <figure class="foto"><img src="img/benitiers.jpg" alt="Île aux Bénitiers set ovenfra" loading="lazy" decoding="async" width="900" height="579"><figcaption>Île aux Bénitiers i lagunen ud for La Gaulette. <a href="https://commons.wikimedia.org/wiki/File:Ile_aux_Benitiers_2021.JPG" target="_blank" rel="noopener">Foto: Happolati, CC BY-SA 4.0</a></figcaption></figure>
   <dl class="props">
    <div><dt>Turen</dt><dd>Océane Cruises' private heldagstur fra L'Estuaire i Grande Rivière Noire, et par minutter fra huset. Vi sejler ud til delfinerne i Tamarin-bugten, snorkler, ser Crystal Rock og får 75 minutter på Île aux Bénitiers</dd></div>
-   <div><dt>Pris</dt><dd>Ca. MUR 61.700 (ca. 8.650 kr.) for op til 6 personer med grill, hummer og drikkevarer. Til 10 personer skal Océane give et tilbud</dd></div>
+   <div><dt>Om bord</dt><dd>Grill, hummer og drikkevarer</dd></div>
    <div><dt>Vejr</dt><dd>Er der høj sø eller kraftig vind, flytter vi turen til søndag eller torsdag. Husk badesko til øen</dd></div>
   </dl>
   <details class="mere"><summary>Anmeldelser og alternativ</summary><dl class="props">
@@ -480,8 +458,8 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
   <figure class="foto"><img src="img/dyk.jpg" alt="Undervandsfoto fra et dyk ved Mauritius" loading="lazy" decoding="async" width="800" height="584"><figcaption>Under vandet ud for Mauritius. <a href="https://commons.wikimedia.org/wiki/File:Subacquea_Mauritius.jpg" target="_blank" rel="noopener">Foto: Patrizio Napolitano, CC BY-SA 2.5</a></figcaption></figure>
   <dl class="props">
    <div><dt>Stedet</dt><dd>Sundivers ved hotellet La Pirogue i Flic en Flac (ca. 20 min). Man behøver ikke bo på hotellet for at dykke med dem</dd></div>
-   <div><dt>De to dykkere</dt><dd>Begge har PADI Open Water, men det er et par år siden sidst, så dagen starter med en genopfriskning i poolen. Bagefter et guidet dyk på et let rev. Et dyk med udstyr koster MUR 3.500 (ca. 490 kr.) pr. person. Spørg om prisen på genopfriskningen</dd></div>
-   <div><dt>Hugo (8)</dt><dd>Børn kan dykke fra 8 år i lav lagune eller pool med en instruktør. Spørg efter et PADI Bubblemaker- eller børnedyk og prisen. Far kan være med i vandet</dd></div>
+   <div><dt>De to dykkere</dt><dd>Begge har PADI Open Water, men det er et par år siden sidst, så dagen starter med en genopfriskning i poolen. Bagefter et guidet dyk på et let rev. Et dyk med udstyr koster MUR 3.500 (ca. 490 kr.) pr. person</dd></div>
+   <div><dt>Hugo (8)</dt><dd>Hugo tager et børnedyk i lavt vand med en instruktør, og far er med i vandet. Børn kan dykke fra 8 år</dd></div>
    <div><dt>Medbring</dt><dd>Certifikat og logbog</dd></div>
    <div><dt>Bemærk</dt><dd>Poolen bruges kun til dykning før kl. 11, så kom tidligt. Lukket søndag. Man må ikke flyve de første 24 timer efter et dyk</dd></div>
   </dl>
@@ -499,7 +477,7 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
    <div><dt>Pris</dt><dd>Fra ca. MUR 7.950 (ca. 1.120 kr.) pr. buggy med 2 sæder</dd></div>
    <div><dt>Varighed</dt><dd>Ca. 2 timer. Hver dag kl. 9:30 og 13:30</dd></div>
    <div><dt>Alder</dt><dd>Føreren skal være 18, og passagerer mindst 5 år. Hugo og Arthur kan begge køre med ved siden af en voksen</dd></div>
-   <div><dt>Booking</dt><dd>+230 260 5101 eller econciergerie@heritageresorts.mu. Turen kan blive aflyst ved dårligt vejr</dd></div>
+   <div><dt>Kontakt</dt><dd>+230 260 5101 eller econciergerie@heritageresorts.mu. Turen kan blive aflyst ved dårligt vejr</dd></div>
   </dl>
   <details class="mere"><summary>Anmeldelser og alternativ</summary><dl class="props">
    <div><dt>Anmeldelser</dt><dd>4,9 på TripAdvisor (221 anmeldelser). Folk er vilde med guiderne og badet under vandfaldet, og mange så hjorte og vildsvin. Turen er ujævn, mudret og støvet, og nogle syntes, den var for kort</dd></div>
