@@ -1,1 +1,1 @@
-# Mauritius-2026
+Family day plan for Mauritius, 4–14 November 2026.
