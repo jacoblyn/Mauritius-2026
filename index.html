@@ -11,7 +11,7 @@
 :root{
  --sand:#faf6ef;--ink:#13303b;--ink2:#3d5763;--ink3:#566d77;
  --teal:#0e6b74;--teal-d:#0a5259;--teal2:#e3f3f2;--sun:#f2a93b;--sun2:#fff3dc;
- --coral:#c9533a;--coral2:#fdece7;--line:#e2d9c8;--card:#fff;--r:18px;
+ --coral:#c9533a;--coral2:#fdece7;--lilla:#f1eefb;--line:#e2d9c8;--card:#fff;--r:20px;
 }
 *{box-sizing:border-box}
 html{font-size:112.5%;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -21,33 +21,32 @@ html[data-tekst="3"]{font-size:140%}
 body{margin:0;background:var(--sand);color:var(--ink);font:1rem/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 a{color:var(--teal)}
 img{max-width:100%}
-h2{font-size:1.6rem;line-height:1.2;margin:0 0 .6rem;letter-spacing:-.01em}
-h3{font-size:1.25rem;line-height:1.25;margin:0}
+h2{font-size:1.6rem;line-height:1.2;margin:0 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.3rem;line-height:1.25;margin:0}
+h4{font-size:1rem;margin:1.1rem 0 .3rem}
 p{margin:0 0 .8rem}
 :focus-visible{outline:3px solid var(--sun);outline-offset:3px}
-.skjult{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* Top */
-.hero{min-height:min(62vh,560px);min-height:min(62svh,560px);background:#0b3a46 center/cover;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:24px 16px 14px}
+.hero{min-height:min(56vh,520px);min-height:min(56svh,520px);background:#0b3a46 center/cover;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:24px 16px 14px}
 .herotxt{max-width:900px;margin:0 auto;width:100%}
 .kicker{font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin:0 0 .4rem;opacity:.95}
 .hero h1{font-size:2.6rem;line-height:1.02;margin:0 0 .6rem;font-weight:800;letter-spacing:-.02em;text-shadow:0 2px 18px rgba(0,0,0,.35)}
 .hero h1 span{display:block;font-size:.55em;font-weight:600;margin-top:.3rem}
 .lead{font-size:1.05rem;max-width:34rem;margin:0 0 1.1rem;text-shadow:0 1px 8px rgba(0,0,0,.45)}
-.herobtn{display:flex;flex-wrap:wrap;gap:10px}
-.herocredit{max-width:900px;margin:18px auto 0;width:100%;font-size:.72rem;opacity:.85}.herocredit a{color:#fff}
+.herocredit{max-width:900px;margin:16px auto 0;width:100%;font-size:.72rem;opacity:.85}.herocredit a{color:#fff}
 
 /* Knapper */
 .knap{display:inline-flex;align-items:center;justify-content:center;gap:.45em;min-height:48px;padding:.55rem 1.1rem;border-radius:999px;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;font-size:1rem;border:2px solid var(--teal);cursor:pointer;font-family:inherit;line-height:1.2}
 .knap:hover{background:var(--teal-d);border-color:var(--teal-d)}
-.knap.lys{background:#fff;color:var(--teal);border-color:var(--teal)}
+.knap.lys{background:#fff;color:var(--teal)}
 .knap.lys:hover{background:var(--teal2)}
 .knap.hvid{background:#fff;color:var(--ink);border-color:#fff}
-.knap.glas{background:rgba(0,0,0,.28);border-color:#fff;color:#fff}
+.knapper{display:flex;flex-wrap:wrap;gap:8px;margin-top:1rem}
 
 /* Menu */
 .menu{background:#fff;border-bottom:1px solid var(--line);padding:10px 16px}
-.menu-in{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;justify-content:space-between}
+.menu-in{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;justify-content:space-between}
 .menu ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .menu ul a{display:inline-flex;align-items:center;min-height:44px;padding:.3rem .9rem;border-radius:999px;background:var(--sand);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem}
 .menu ul a:hover{border-color:var(--teal)}
@@ -57,56 +56,79 @@ p{margin:0 0 .8rem}
 .tekststr button:nth-of-type(1){font-size:15px}.tekststr button:nth-of-type(2){font-size:19px}.tekststr button:nth-of-type(3){font-size:23px}
 @media(min-width:900px){.menu{position:sticky;top:0;z-index:5}}
 
-main{max-width:1120px;margin:0 auto;padding:0 16px 48px}
-.blok{padding-top:2.4rem;scroll-margin-top:80px}
-.intro{color:var(--ink2);margin-top:-.2rem}
+main{max-width:1000px;margin:0 auto;padding:0 16px 48px}
+.blok{padding-top:2.6rem;scroll-margin-top:80px}
+.intro{color:var(--ink2)}
 
 /* I dag */
-.idag{background:linear-gradient(135deg,#0e6b74,#11818a);color:#fff;border-radius:22px;padding:20px 18px;margin-top:1.6rem;scroll-margin-top:80px}
-.idag h2{color:#fff;font-size:1.5rem}
-.idag .ur{font-size:1.05rem;margin:0 0 .9rem}
-.idag .dag{color:var(--ink);margin:0;box-shadow:0 8px 28px rgba(0,0,0,.18);border-color:transparent}
+.idag{background:linear-gradient(135deg,#0e6b74,#11818a);color:#fff;border-radius:24px;padding:20px 18px;margin-top:1.6rem;scroll-margin-top:80px}
+.idag h2{color:#fff}
+.idag .ur{font-size:1.05rem;margin:0 0 1rem}
+.idag .dag{color:var(--ink);box-shadow:0 8px 28px rgba(0,0,0,.18);border-color:transparent}
 .imorgen{margin:1rem 0 0;font-size:1.05rem}
 .imorgen a{color:#fff;font-weight:700}
 
-/* Dagvælger */
-.dagvalg{display:grid;grid-template-columns:repeat(auto-fill,minmax(5.6rem,1fr));gap:8px;margin:0 0 1.2rem;padding:0;list-style:none}
-.dagvalg a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:64px;padding:6px 4px;border-radius:14px;background:#fff;border:2px solid var(--line);text-decoration:none;color:var(--ink);line-height:1.15;text-align:center}
-.dagvalg a:hover{border-color:var(--teal)}
-.dagvalg .ug{font-size:.8rem;color:var(--ink2);font-weight:600}
-.dagvalg .dt{font-size:1.15rem;font-weight:800}
-.dagvalg .em{font-size:1.1rem}
-.dagvalg a.nu{border-color:var(--coral);background:var(--coral2)}
+/* Ugen på et øjeblik */
+.uge{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:8px}
+.uge a{display:flex;align-items:center;gap:10px;min-height:64px;padding:8px 12px;border-radius:16px;background:#fff;border:2px solid var(--line);text-decoration:none;color:var(--ink);line-height:1.2}
+.uge a:hover{border-color:var(--teal)}
+.uge .em{font-size:1.5rem;flex:0 0 auto}
+.uge .ug{display:block;font-size:.8rem;font-weight:700;color:var(--ink2)}
+.uge .hv{display:block;font-weight:700}
+.uge a.nu{border-color:var(--coral);background:var(--coral2)}
 
 /* Dagkort */
-.plangrid{display:grid;gap:20px}
-.dage{display:grid;gap:16px}
+.dage{display:grid;gap:16px;margin-top:1rem}
 .dag{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:16px;scroll-margin-top:90px;transition:box-shadow .2s,border-color .2s}
 .dag.on{border-color:var(--teal);box-shadow:0 0 0 4px rgba(14,107,116,.22)}
 .dag.nu{border-color:var(--coral)}
-.dhead{display:flex;gap:12px;align-items:flex-start;margin-bottom:.8rem}
-.nr{flex:0 0 auto;min-width:2.4rem;height:2.4rem;padding:0 .5rem;border-radius:999px;background:var(--teal);color:#fff;font-weight:800;font-size:1.05rem;display:inline-flex;align-items:center;justify-content:center}
-.dag[data-m="H"] .nr{background:var(--coral)}
-.dato{margin:0;font-size:.95rem;font-weight:700;color:var(--ink2)}
-.maerke{display:inline-block;font-size:.78rem;font-weight:700;background:var(--sun2);color:#7a4a00;border:1px solid #f0d199;border-radius:999px;padding:.05rem .55rem;margin-left:.3rem;vertical-align:middle}
-.dag.nu .dato::after{content:"I dag";display:inline-block;margin-left:.4rem;font-size:.78rem;background:var(--coral);color:#fff;border-radius:999px;padding:.05rem .55rem;vertical-align:middle}
-.idag .dag.nu .dato::after{display:none}
-.tider{margin:0;display:grid;gap:10px}
+.dtop{display:flex;gap:14px;align-items:center}
+.kal{flex:0 0 4.6rem;text-align:center;border-radius:14px;overflow:hidden;border:2px solid var(--teal);background:#fff;line-height:1.1}
+.kal .ug{display:block;background:var(--teal);color:#fff;font-size:.72rem;font-weight:700;padding:3px 0}
+.kal .dn{display:block;font-size:1.6rem;font-weight:800;padding:2px 0 0}
+.kal .mn{display:block;font-size:.68rem;color:var(--ink2);padding-bottom:4px}
+.dag[data-m="H"] .kal{border-color:var(--coral)}.dag[data-m="H"] .kal .ug{background:var(--coral)}
+.dmeta{margin:0 0 .15rem;font-size:.85rem;font-weight:700;color:var(--ink3)}
+.maerke{display:inline-block;font-size:.78rem;font-weight:700;background:var(--sun2);color:#7a4a00;border:1px solid #f0d199;border-radius:999px;padding:.05rem .55rem;margin-left:.2rem}
+.nu-tag{display:none;font-size:.78rem;background:var(--coral);color:#fff;border-radius:999px;padding:.05rem .55rem;margin-left:.3rem}
+.dag.nu .nu-tag{display:inline-block}.idag .nu-tag{display:none!important}
+.kort{font-size:1.05rem;margin:.9rem 0 .6rem}
+.fakta{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.fakta li{background:var(--teal2);border-radius:999px;padding:.2rem .75rem;font-size:.92rem;font-weight:600}
+
+/* Mere info */
+details.mere{margin-top:.9rem}
+details.mere summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.5em;min-height:48px;padding:.5rem 1.2rem;border-radius:999px;border:2px solid var(--teal);color:var(--teal);font-weight:700;background:#fff}
+details.mere summary::-webkit-details-marker{display:none}
+details.mere summary:hover{background:var(--teal2)}
+details.mere summary::after{content:"▾";font-size:1.1em}
+details.mere[open] summary::after{content:"▴"}
+details.mere .skjul{display:none}
+details.mere[open] .vis{display:none}
+details.mere[open] .skjul{display:inline}
+.indhold{margin-top:.8rem;border-top:1px solid var(--line);padding-top:.4rem}
+.indhold p{margin:0 0 .5rem}
+.indhold ul,.indhold ol{margin:0 0 .5rem;padding-left:1.3rem}
+.indhold li{margin:.2rem 0}
+.tider{margin:0;display:grid;gap:8px}
 .tider div{background:var(--sand);border-radius:12px;padding:10px 12px}
-.tider dt{font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--teal)}
+.tider dt{font-weight:800;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--teal)}
 .tider dd{margin:2px 0 0}
-.note{margin:.7rem 0 0;padding:.6rem .8rem;border-radius:12px;font-size:.95rem}
-.note b{display:block;font-size:.85rem}
-.bedste{background:#f1eefb;border-left:5px solid #7b6bc7}
-.planb{background:var(--sun2);border-left:5px solid var(--sun)}
-.husk{margin:.8rem 0 0;font-size:.95rem}
-.husk b{margin-right:.3rem}
-.husk span{display:inline-block;background:var(--teal2);border-radius:999px;padding:.1rem .65rem;margin:.15rem .1rem;font-size:.9rem}
-.knapper{display:flex;flex-wrap:wrap;gap:8px;margin-top:.9rem}
+.boks{border-radius:12px;padding:.6rem .9rem;margin:.8rem 0 0}
+.boks h4{margin:0 0 .2rem}
+.boks p{margin:0}
+.boks.bedste{background:var(--lilla)}
+.boks.vejr{background:var(--sun2)}
+.husk{list-style:none;padding:0!important;display:flex;flex-wrap:wrap;gap:6px}
+.husk li{background:var(--sand);border:1px solid var(--line);border-radius:999px;padding:.1rem .7rem;font-size:.92rem;margin:0!important}
+.foto{margin:.8rem 0 0}
+.foto img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:14px;display:block;background:#e8e2d6}
+.foto figcaption{font-size:.78rem;color:var(--ink3);margin-top:4px}.foto figcaption a{color:var(--ink3)}
+.fotogrid{display:grid;gap:10px}
 
 /* Kort */
-.kortboks{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:12px}
-.kort svg{width:100%;height:auto;display:block;max-width:560px;margin:0 auto}
+.kortboks{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:12px;max-width:600px}
+.kort svg{width:100%;height:auto;display:block}
 .hav{fill:#dcedef}.land{fill:#f6efe0;stroke:#9fb3a6;stroke-width:1.5;stroke-linejoin:round}
 .by{fill:var(--ink3)}.bytekst{font-size:14px;fill:var(--ink3)}
 .rute{fill:none;stroke:var(--sun);stroke-width:4;stroke-linejoin:round;stroke-linecap:round}
@@ -116,84 +138,50 @@ main{max-width:1120px;margin:0 auto;padding:0 16px 48px}
 .boble{fill:var(--teal);stroke:#fff;stroke-width:2}.boble.hjem{fill:var(--coral)}
 .bobletekst{font-size:17px;font-weight:800;fill:#fff;pointer-events:none}
 .mk.on .boble,.mk:focus-visible .boble{fill:var(--ink);stroke:var(--sun);stroke-width:4}
-.korttekst{margin:10px 4px 2px;font-size:.95rem;color:var(--ink2);min-height:3em}
+.korttekst{margin:10px 4px 2px;font-size:.95rem;color:var(--ink2)}
 .korttekst strong{color:var(--ink)}
 
-
-/* Aktiviteter */
-.akt{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:16px;margin-top:18px;scroll-margin-top:80px}
-.akt>header{display:flex;gap:12px;align-items:center;margin-bottom:.4rem}
-.aktikon{font-size:1.6rem;width:3rem;height:3rem;flex:0 0 3rem;border-radius:50%;background:var(--teal2);display:flex;align-items:center;justify-content:center}
-.tag{margin:0;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--teal);font-weight:800}
-.foto{margin:12px 0 0}
-.foto img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:14px;display:block;background:#e8e2d6}
-.foto figcaption{font-size:.8rem;color:var(--ink3);margin-top:4px}.foto figcaption a{color:var(--ink3)}
-.fotogrid{display:grid;gap:12px}
-.props{margin:14px 0 0}
-.props div{padding:10px 0;border-top:1px solid var(--line)}
-.props dt{font-weight:800;color:var(--teal);font-size:.95rem}
-.props dd{margin:2px 0 0}
-details.mere{margin-top:10px;border-top:1px solid var(--line)}
-details.mere summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.5rem;min-height:48px;font-weight:700;color:var(--teal)}
-details.mere summary::-webkit-details-marker{display:none}
-details.mere summary::before{content:"＋";display:inline-flex;align-items:center;justify-content:center;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--teal2);font-weight:800}
-details.mere[open] summary::before{content:"－"}
-details.mere .props{margin-top:0}
-.links{display:grid;gap:8px;margin-top:12px}
-.linkcard{display:flex;flex-direction:column;justify-content:center;min-height:56px;text-decoration:none;color:var(--ink);background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
-.linkcard:hover{border-color:var(--teal)}
-.lt{font-weight:700}.ls{font-size:.85rem;color:var(--teal)}
-
 /* Praktisk */
+.noed{background:var(--coral2);border:2px solid #f1c3b7;border-radius:var(--r);padding:16px;margin-bottom:12px}
+.noed .knap{background:var(--coral);border-color:var(--coral)}
+.noed .knap:hover{background:#a8402a;border-color:#a8402a}
+.hus{background:var(--teal2);border-radius:var(--r);padding:16px;margin-bottom:12px}
+.noed h3,.hus h3{margin-bottom:.4rem}
+.noed .knapper,.hus .knapper{margin-top:.4rem}
 .tips{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.tips li{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+.tips li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
 .ti{font-size:1.4rem;width:2.6rem;height:2.6rem;flex:0 0 2.6rem;display:flex;align-items:center;justify-content:center;background:var(--sand);border-radius:50%}
 .tips strong{display:block}
 .tips li div>span{color:var(--ink2);font-size:.95rem}
-.noed{background:var(--coral2);border:2px solid #f1c3b7;border-radius:var(--r);padding:16px;margin-bottom:14px}
-.noed h3{margin-bottom:.5rem}
-.noed .knapper{margin-top:.4rem}
-.noed .knap{background:var(--coral);border-color:var(--coral)}
-.noed .knap:hover{background:#a8402a;border-color:#a8402a}
-.hus{background:var(--teal2);border-radius:var(--r);padding:16px;margin-bottom:14px}
 
 .rows{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.rows li{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+.rows li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
 .rows strong{display:block}.rows span{color:var(--ink2);font-size:.95rem}
 
 footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90px}
 .optop{position:fixed;right:14px;bottom:14px;z-index:6;box-shadow:0 6px 18px rgba(0,0,0,.2);opacity:0;pointer-events:none;transition:opacity .2s}
 .optop.vis{opacity:1;pointer-events:auto}
 .optop .ord{display:none}
-@media(min-width:720px){.optop .ord{display:inline}}
 
 @media(min-width:720px){
  .hero{padding:40px 40px 18px}.hero h1{font-size:4rem}.lead{font-size:1.15rem}
  .idag{padding:26px 28px}
+ .dag{padding:20px 22px}
  .tider{grid-template-columns:1fr 1fr}
- .tips{grid-template-columns:1fr 1fr}
  .fotogrid{grid-template-columns:1fr 1fr}
- .links{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
- .akt{padding:24px}
- .props div{display:grid;grid-template-columns:10rem 1fr;gap:16px}
- .rows{grid-template-columns:1fr 1fr}
+ .tips,.rows{grid-template-columns:1fr 1fr}
+ .optop .ord{display:inline}
 }
-@media(min-width:1000px){
- .plangrid{grid-template-columns:400px 1fr;align-items:start}
- .kortboks{position:sticky;top:80px}
- .dagvalg{grid-template-columns:repeat(11,1fr)}
-}
+@media(min-width:960px){.uge{grid-template-columns:repeat(6,1fr)}}
 
 @media print{
  html{font-size:11pt}
  body{background:#fff}
  .hero{min-height:0;background:none!important;color:var(--ink);padding:0 0 8pt}
  .hero h1{font-size:24pt;text-shadow:none}.lead{text-shadow:none}
- .herobtn,.herocredit,.menu,.optop,.kortboks,.dagvalg,.knapper,.foto,.fotogrid,.links,#idag,details.mere summary{display:none!important}
- details.mere>*{display:block}
+ .hero .knap,.herocredit,.menu,.optop,#idag,#ugen>.intro,.uge,#kortet,.knapper,.foto,.fotogrid,details.mere summary,footer button{display:none!important}
  .blok{padding-top:12pt}
- .dag,.akt{break-inside:avoid;border:1px solid #bbb;box-shadow:none}
- .plangrid{display:block}
+ .dag{break-inside:avoid;border:1px solid #bbb;box-shadow:none}
  a{color:inherit;text-decoration:none}
  footer{padding:8pt}
 }
@@ -205,8 +193,8 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
  <div class="herotxt">
   <p class="kicker">Familietur · Black River, Mauritius</p>
   <h1>Mauritius <span>4.–14. november 2026</span></h1>
-  <p class="lead">Dagsplanen for hele familien, 10 personer, i Villa Harmonia i Black River. Havet om morgenen, poolen om eftermiddagen og hviledage ind imellem.</p>
-  <div class="herobtn"><a class="knap hvid" href="#idag">Hvad skal vi i dag?</a><a class="knap glas" href="#plan">Se alle dage</a></div>
+  <p class="lead">Hele familien, 10 personer, i Villa Harmonia. Havet om morgenen, poolen om eftermiddagen og hviledage ind imellem.</p>
+  <a class="knap hvid" href="#idag">Hvad skal vi i dag?</a>
  </div>
  <p class="herocredit">Île aux Bénitiers. <a href="https://commons.wikimedia.org/wiki/File:Ile_aux_Benitiers_2021.JPG" target="_blank" rel="noopener">Foto: Happolati, CC BY-SA 4.0</a></p>
 </header>
@@ -215,8 +203,8 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
  <div class="menu-in">
   <ul>
    <li><a href="#idag">I dag</a></li>
-   <li><a href="#plan">Dag for dag</a></li>
-   <li><a href="#aktiviteter">Turene</a></li>
+   <li><a href="#ugen">Ugen</a></li>
+   <li><a href="#kortet">Kort</a></li>
    <li><a href="#praktisk">Praktisk</a></li>
    <li><a href="#mad">Mad</a></li>
   </ul>
@@ -233,30 +221,228 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
 
 <section id="idag" class="idag" aria-live="polite">
  <h2>Velkommen</h2>
- <p class="ur">Her står dagens plan, når vi er på Mauritius. Se alle dagene længere nede.</p>
+ <p class="ur">Her står dagens plan, når vi er på Mauritius.</p>
 </section>
 
-<section id="plan" class="blok">
- <h2>Dag for dag</h2>
- <p class="intro">Tryk på en dag for at hoppe til den. Køretider er anslåede og regnet fra huset i Black River.</p>
- <ul class="dagvalg" id="dagvalg">
-  <li><a href="#dag-1"><span class="ug">Ons</span><span class="dt">4/11</span><span class="em" aria-hidden="true">🐠</span></a></li>
-  <li><a href="#dag-2"><span class="ug">Tor</span><span class="dt">5/11</span><span class="em" aria-hidden="true">🎣</span></a></li>
-  <li><a href="#dag-3"><span class="ug">Fre</span><span class="dt">6/11</span><span class="em" aria-hidden="true">🦓</span></a></li>
-  <li><a href="#dag-4"><span class="ug">Lør</span><span class="dt">7/11</span><span class="em" aria-hidden="true">⛵</span></a></li>
-  <li><a href="#dag-5"><span class="ug">Søn</span><span class="dt">8/11</span><span class="em" aria-hidden="true">🏖️</span></a></li>
-  <li><a href="#dag-6"><span class="ug">Man</span><span class="dt">9/11</span><span class="em" aria-hidden="true">🤿</span></a></li>
-  <li><a href="#dag-7"><span class="ug">Tir</span><span class="dt">10/11</span><span class="em" aria-hidden="true">🚙</span></a></li>
-  <li><a href="#dag-8"><span class="ug">Ons</span><span class="dt">11/11</span><span class="em" aria-hidden="true">⛰️</span></a></li>
-  <li><a href="#dag-9"><span class="ug">Tor</span><span class="dt">12/11</span><span class="em" aria-hidden="true">🏊</span></a></li>
-  <li><a href="#dag-10"><span class="ug">Fre</span><span class="dt">13/11</span><span class="em" aria-hidden="true">🏖️</span></a></li>
-  <li><a href="#dag-11"><span class="ug">Lør</span><span class="dt">14/11</span><span class="em" aria-hidden="true">✈️</span></a></li>
+<section id="ugen" class="blok">
+ <h2>Ugen på et øjeblik</h2>
+ <p class="intro">Tryk på en dag for at se, hvad vi skal.</p>
+ <ul class="uge" id="ugeliste">
+  <li><a href="#dag-1"><span class="em" aria-hidden="true">🐠</span><span><span class="ug">Ons 4/11</span><span class="hv">Snorkling</span></span></a></li>
+  <li><a href="#dag-2"><span class="em" aria-hidden="true">🎣</span><span><span class="ug">Tor 5/11</span><span class="hv">Fisketur</span></span></a></li>
+  <li><a href="#dag-3"><span class="em" aria-hidden="true">🦓</span><span><span class="ug">Fre 6/11</span><span class="hv">Casela</span></span></a></li>
+  <li><a href="#dag-4"><span class="em" aria-hidden="true">⛵</span><span><span class="ug">Lør 7/11</span><span class="hv">Katamaran</span></span></a></li>
+  <li><a href="#dag-5"><span class="em" aria-hidden="true">🏖️</span><span><span class="ug">Søn 8/11</span><span class="hv">Hviledag</span></span></a></li>
+  <li><a href="#dag-6"><span class="em" aria-hidden="true">🤿</span><span><span class="ug">Man 9/11</span><span class="hv">Dykning</span></span></a></li>
+  <li><a href="#dag-7"><span class="em" aria-hidden="true">🚙</span><span><span class="ug">Tir 10/11</span><span class="hv">Buggy</span></span></a></li>
+  <li><a href="#dag-8"><span class="em" aria-hidden="true">⛰️</span><span><span class="ug">Ons 11/11</span><span class="hv">Vandretur</span></span></a></li>
+  <li><a href="#dag-9"><span class="em" aria-hidden="true">🏊</span><span><span class="ug">Tor 12/11</span><span class="hv">Pooldag</span></span></a></li>
+  <li><a href="#dag-10"><span class="em" aria-hidden="true">🏖️</span><span><span class="ug">Fre 13/11</span><span class="hv">Strand</span></span></a></li>
+  <li><a href="#dag-11"><span class="em" aria-hidden="true">✈️</span><span><span class="ug">Lør 14/11</span><span class="hv">Hjemrejse</span></span></a></li>
  </ul>
 
- <div class="plangrid">
-  <div class="kortboks">
-   <div class="kort">
-    <svg viewBox="0 0 600 673" role="img" aria-label="Kort over Mauritius med ugens ture">
+ <div class="dage" id="dagtabel">
+
+  <article class="dag" id="dag-1" data-m="1" data-date="2026-11-04" data-titel="Stille start med snorkling">
+   <div class="dtop"><div class="kal"><span class="ug">Onsdag</span><span class="dn">4</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 1<span class="nu-tag">I dag</span></p><h3>🐠 Stille start med snorkling</h3></div></div>
+   <p class="kort">Vi snorkler i den rolige lagune ved Flic en Flac om formiddagen. Resten af dagen er pool og tidligt i seng.</p>
+   <ul class="fakta"><li>🚗 20 min</li><li>☀️ Formiddag</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <figure class="foto"><img src="img/flic-en-flac.jpg" alt="Stranden og lagunen ved Flic en Flac" loading="lazy" decoding="async" width="900" height="484"><figcaption>Lagunen ved Flic en Flac. <a href="https://commons.wikimedia.org/wiki/File:Flic-en-Flac_beach,_March_2020_(8).jpg" target="_blank" rel="noopener">Foto: Benoît Prieur, CC0</a></figcaption></figure>
+    <h4>Sådan ser dagen ud</h4>
+    <dl class="tider"><div><dt>Formiddag</dt><dd>Snorkling i lagunen ved Flic en Flac</dd></div><div><dt>Eftermiddag</dt><dd>Pool og tidligt i seng</dd></div></dl>
+    <div class="boks vejr"><h4>🌬️ Hvis det blæser</h4><p>Så bliver vi ved poolen.</p></div>
+    <h4>🎒 Husk</h4><ul class="husk"><li>Badetøj</li><li>Badesko</li><li>Maske og snorkel</li><li>Solcreme</li></ul>
+    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Flic+en+Flac+Public+Beach+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a></div>
+   </div></details>
+  </article>
+
+  <article class="dag" id="dag-2" data-m="2" data-date="2026-11-05" data-titel="Tidlig fisketur på havet">
+   <div class="dtop"><div class="kal"><span class="ug">Torsdag</span><span class="dn">5</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 2<span class="nu-tag">I dag</span></p><h3>🎣 Tidlig fisketur på havet</h3></div></div>
+   <p class="kort">Fiskerne kører hjemmefra kl. 03:30, og båden sejler fra Grand Baie kl. 05:00. Resten af dagen er rolig: frokost, lur og pool.</p>
+   <ul class="fakta"><li>⏰ Afgang 03:30</li><li>🚗 1 t 15 min</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <figure class="foto"><img src="img/fiskeri.jpg" alt="Fiskestænger på en båd ud for Mauritius" loading="lazy" decoding="async" width="675" height="900"><figcaption>Fiskeri ud for Mauritius. <a href="https://commons.wikimedia.org/wiki/File:Big-game_fishing_in_Mauritius_(53697978948).jpg" target="_blank" rel="noopener">Foto: dronepicr, CC BY 2.0</a></figcaption></figure>
+    <h4>Sådan ser dagen ud</h4>
+    <dl class="tider"><div><dt>Tidlig morgen</dt><dd>Afgang hjemmefra ca. kl. 03:30. Båden sejler kl. 05:00 fra Grand Baie i nord</dd></div><div><dt>Eftermiddag</dt><dd>Frokost, lur og pool. Ikke mere den dag</dd></div></dl>
+    <div class="boks bedste"><h4>😴 Til dem, der bliver hjemme</h4><p>Sov længe. Måske bliver der frisk fisk på grillen, hvis kaptajnen lader os tage noget af fangsten med hjem.</p></div>
+    <h4>🎒 Husk</h4><ul class="husk"><li>Søsygepiller</li><li>Varm trøje til båden</li><li>Solcreme</li><li>Vand</li></ul>
+    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Grand+Baie+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a></div>
+   </div></details>
+  </article>
+
+  <article class="dag" id="dag-3" data-m="3" data-date="2026-11-06" data-titel="Dyr og safari i Casela">
+   <div class="dtop"><div class="kal"><span class="ug">Fredag</span><span class="dn">6</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 3<span class="nu-tag">I dag</span></p><h3>🦓 Dyr og safari i Casela</h3></div></div>
+   <p class="kort">En nem dag på land i Casela Nature Park med safaritur og masser af dyr. Hjem ved 15-tiden og i poolen.</p>
+   <ul class="fakta"><li>⏰ Vær der kl. 9</li><li>🚗 15 min</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <figure class="foto"><img src="img/casela-zebraer.jpg" alt="Zebraer på savannen i Casela" loading="lazy" decoding="async" width="900" height="299"><figcaption>Zebraer i Casela. <a href="https://commons.wikimedia.org/wiki/File:Zebras_in_Casela_Nature_Parks,_Mauritius.jpg" target="_blank" rel="noopener">Foto: 7oanna, CC BY-SA 4.0</a></figcaption></figure>
+    <h4>Sådan ser dagen ud</h4>
+    <dl class="tider"><div><dt>Formiddag</dt><dd>Casela Nature Park fra kl. 9, når de åbner</dd></div><div><dt>Eftermiddag</dt><dd>Hjem ved 15-tiden og i poolen</dd></div></dl>
+    <div class="boks bedste"><h4>👵 Til bedsteforældrene</h4><p>Safarituren foregår fra en truck, så man skal ikke gå langt.</p></div>
+    <h4>🎟️ Billetter</h4>
+    <p>Casela Special giver adgang, safaritruck, Tulawaka og så mange Pangia-ture, man vil. MUR 1.600 (ca. 220 kr.) pr. voksen og MUR 1.300 (ca. 180 kr.) pr. barn på 4–12 år.</p>
+    <p>Farm Special, hvor man også fodrer dyr, koster MUR 2.100 / 1.860 (ca. 290 / 260 kr.).</p>
+    <h4>🕘 Åbent</h4>
+    <p>Kl. 9–17. Aktiviteterne med dyr slutter kl. 15:30, og restauranterne lukker kl. 16.</p>
+    <h4>🎒 Husk</h4><ul class="husk"><li>Kasket</li><li>Vand</li><li>Gode sko</li><li>Solcreme</li></ul>
+    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Casela+Nature+Parks+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="https://caselaparks.com/" target="_blank" rel="noopener">Caselas hjemmeside ↗</a></div>
+   </div></details>
+  </article>
+
+  <article class="dag" id="dag-4" data-m="4" data-date="2026-11-07" data-titel="Katamaran ud til delfinerne">
+   <div class="dtop"><div class="kal"><span class="ug">Lørdag</span><span class="dn">7</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 4 <span class="maerke">Ugens højdepunkt</span><span class="nu-tag">I dag</span></p><h3>⛵ Katamaran ud til delfinerne</h3></div></div>
+   <p class="kort">Vi sejler i vores egen katamaran ud til delfinerne, snorkler og besøger den lille ø Île aux Bénitiers. Grill og frokost om bord.</p>
+   <ul class="fakta"><li>⏱️ Ca. 6 timer</li><li>🚗 Et par minutter</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <figure class="foto"><img src="img/benitiers.jpg" alt="Île aux Bénitiers set ovenfra" loading="lazy" decoding="async" width="900" height="579"><figcaption>Île aux Bénitiers. <a href="https://commons.wikimedia.org/wiki/File:Ile_aux_Benitiers_2021.JPG" target="_blank" rel="noopener">Foto: Happolati, CC BY-SA 4.0</a></figcaption></figure>
+    <h4>Sådan ser dagen ud</h4>
+    <dl class="tider"><div><dt>Formiddag</dt><dd>Privat katamaran med Océane fra L'Estuaire i Grande Rivière Noire</dd></div><div><dt>Eftermiddag</dt><dd>Hjem til pool og grill</dd></div></dl>
+    <h4>🗺️ Turen</h4>
+    <ul><li>Delfiner i Tamarin-bugten</li><li>Snorkling</li><li>Klippen Crystal Rock</li><li>75 minutter på Île aux Bénitiers</li><li>Grill, hummer og drikkevarer om bord</li></ul>
+    <div class="boks vejr"><h4>🌊 Hvis havet er uroligt</h4><p>Så flytter vi turen til søndag eller torsdag.</p></div>
+    <h4>⭐ Det siger andre</h4>
+    <p>Turen har 5,0 på TripAdvisor. Folk roser besætningen, grillmaden og delfinerne tæt på båden. Vandet ved øen er lavt, og der kan være mange mennesker.</p>
+    <h4>🎒 Husk</h4><ul class="husk"><li>Badetøj</li><li>Badesko til øen</li><li>Håndklæde</li><li>Solcreme</li><li>Søsygepiller</li></ul>
+    <div class="knapper"><a class="knap lys" href="https://oceane.mu/" target="_blank" rel="noopener">Océane Cruises ↗</a><a class="knap lys" href="https://www.tripadvisor.com.sg/AttractionProductReview-g293816-d20002766-Black_River_Full_day_Private_catamaran_to_Benitiers_island-Mauritius.html" target="_blank" rel="noopener">Anmeldelser ↗</a></div>
+   </div></details>
+  </article>
+
+  <article class="dag" id="dag-5" data-m="58" data-date="2026-11-08" data-titel="Hviledag og stranden ved Le Morne">
+   <div class="dtop"><div class="kal"><span class="ug">Søndag</span><span class="dn">8</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 5<span class="nu-tag">I dag</span></p><h3>🏖️ Hviledag og stranden ved Le Morne</h3></div></div>
+   <p class="kort">En rolig dag midt i ferien. Voksne, der har lyst, går op på Le Morne-bjerget om morgenen. Om eftermiddagen strand og solnedgang.</p>
+   <ul class="fakta"><li>🥾 Bjergtur kl. 7 (frivillig)</li><li>🌅 Solnedgang</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <figure class="foto"><img src="img/le-morne-luft.jpg" alt="Le Morne-bjerget og halvøen set fra luften" loading="lazy" decoding="async" width="900" height="600"><figcaption>Le Morne Brabant. <a href="https://commons.wikimedia.org/wiki/File:Le_Morne_Peninsula_in_Mauritius_(53697779236).jpg" target="_blank" rel="noopener">Foto: dronepicr, CC BY 2.0</a></figcaption></figure>
+    <h4>Sådan ser dagen ud</h4>
+    <dl class="tider"><div><dt>Formiddag</dt><dd>Hviledag. Guidet tur op på Le Morne kl. 7 for dem, der vil</dd></div><div><dt>Eftermiddag</dt><dd>Le Morne public beach og solnedgang</dd></div></dl>
+    <h4>⛰️ Turen op på toppen</h4>
+    <p>Tager 3,5–4,5 timer med guide. Det sidste stykke er stejl klatring, og børn under 13 må ikke komme med. Kun for friske voksne. Ca. MUR 2.400–4.000 (ca. 340–560 kr.).</p>
+    <div class="boks bedste"><h4>👵 Til bedsteforældrene</h4><p>Stranden ved Le Morne har rolig lagune og skygge under træerne.</p></div>
+    <h4>🎒 Husk</h4><ul class="husk"><li>Vandresko og 1,5 l vand (bjergturen)</li><li>Badetøj</li><li>Myggespray</li></ul>
+    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Le+Morne+Public+Beach+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="https://mauritius-fun-tours.com/en/guides/le-morne-brabant-guided-hike/" target="_blank" rel="noopener">Om bjergturen ↗</a></div>
+   </div></details>
+  </article>
+
+  <article class="dag" id="dag-6" data-m="6" data-date="2026-11-09" data-titel="Dykning og snorkling">
+   <div class="dtop"><div class="kal"><span class="ug">Mandag</span><span class="dn">9</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 6<span class="nu-tag">I dag</span></p><h3>🤿 Dykning og snorkling</h3></div></div>
+   <p class="kort">Dykkerne tager et dyk hos Sundivers i Flic en Flac, og Hugo prøver et børnedyk. Alle andre snorkler i den lave lagune lige ved siden af.</p>
+   <ul class="fakta"><li>⏰ Kom tidligt</li><li>🚗 20 min</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <figure class="foto"><img src="img/dyk.jpg" alt="Undervandsfoto fra et dyk ved Mauritius" loading="lazy" decoding="async" width="800" height="584"><figcaption>Under vandet ud for Mauritius. <a href="https://commons.wikimedia.org/wiki/File:Subacquea_Mauritius.jpg" target="_blank" rel="noopener">Foto: Patrizio Napolitano, CC BY-SA 2.5</a></figcaption></figure>
+    <h4>Sådan ser dagen ud</h4>
+    <dl class="tider"><div><dt>Formiddag</dt><dd>Dykning hos Sundivers ved hotellet La Pirogue, og snorkling i lagunen</dd></div><div><dt>Eftermiddag</dt><dd>Strand og pool</dd></div></dl>
+    <h4>🤿 Hvem gør hvad</h4>
+    <ul><li><b>De to dykkere:</b> genopfriskning i poolen og derefter et guidet dyk på et let rev</li><li><b>Hugo (8):</b> børnedyk i lavt vand med en instruktør. Far er med i vandet</li><li><b>Alle andre:</b> snorkling i den lave lagune. Arthur har redningsvest og maske på</li></ul>
+    <div class="boks bedste"><h4>👵 Til bedsteforældrene</h4><p>Lagunen ved Flic en Flac er lav og rolig. Snorkeludstyr kan lejes på stranden.</p></div>
+    <div class="boks vejr"><h4>🌊 Hvis havet er uroligt</h4><p>Så bytter vi med torsdag.</p></div>
+    <h4>ℹ️ Godt at vide</h4>
+    <ul><li>Kom tidligt: poolen bruges kun til dykning før kl. 11</li><li>Et dyk med udstyr koster MUR 3.500 (ca. 490 kr.)</li><li>Man må ikke flyve de første 24 timer efter et dyk</li></ul>
+    <h4>🎒 Husk</h4><ul class="husk"><li>Dykkercertifikat og logbog</li><li>Badetøj</li><li>Solcreme</li></ul>
+    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sundivers+La+Pirogue+Flic+en+Flac" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="tel:+23059721504">📞 Ring til Sundivers</a></div>
+   </div></details>
+  </article>
+
+  <article class="dag" id="dag-7" data-m="7" data-date="2026-11-10" data-titel="Buggy-safari i naturreservatet">
+   <div class="dtop"><div class="kal"><span class="ug">Tirsdag</span><span class="dn">10</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 7<span class="nu-tag">I dag</span></p><h3>🚙 Buggy-safari i naturreservatet</h3></div></div>
+   <p class="kort">To timer i buggy gennem skov og sukkerrørsmarker i Bel Ombre, med badestop ved et vandfald. Frokost i Bel Ombre og så hjem til poolen.</p>
+   <ul class="fakta"><li>⏰ Start 9:30</li><li>🚗 50 min (vi kører ca. 8:30)</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <h4>Sådan ser dagen ud</h4>
+    <dl class="tider"><div><dt>Formiddag</dt><dd>Buggy-safari i Bel Ombre Nature Reserve kl. 9:30–11:30</dd></div><div><dt>Eftermiddag</dt><dd>Frokost i Bel Ombre, så hjem til poolen</dd></div></dl>
+    <h4>🚙 Turen</h4>
+    <ul><li>Gennem skov og sukkerrørsmarker, forbi ruinerne af en gammel sukkermølle</li><li>Bad ved L'Exemple-vandfaldet</li><li>Mange ser hjorte og vildsvin undervejs</li><li>2 personer pr. buggy. Føreren skal være over 18, og børn fra 5 år kører med som passagerer</li></ul>
+    <div class="boks bedste"><h4>👵 Til bedsteforældrene</h4><p>Kør med som passager, eller nyd kysten i Bel Ombre imens. Turen er ujævn og kan være mudret.</p></div>
+    <div class="boks vejr"><h4>🌧️ Hvis det regner kraftigt</h4><p>Så bytter vi med fredag.</p></div>
+    <h4>🎒 Husk</h4><ul class="husk"><li>Lukkede sko</li><li>Tøj, der må blive beskidt</li><li>Badetøj til vandfaldet</li><li>Myggespray</li></ul>
+    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Frederica+Nature+Reserve+Bel+Ombre+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="tel:+2302605101">📞 Ring til buggyturen</a><a class="knap lys" href="https://heritageresorts.mu/plan-stay-mauritius/buggy-bel-ombre-nature-reserve" target="_blank" rel="noopener">Om turen ↗</a></div>
+   </div></details>
+  </article>
+
+  <article class="dag" id="dag-8" data-m="58" data-date="2026-11-11" data-titel="Familievandretur ved Le Morne">
+   <div class="dtop"><div class="kal"><span class="ug">Onsdag</span><span class="dn">11</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 8<span class="nu-tag">I dag</span></p><h3>⛰️ Familievandretur ved Le Morne</h3></div></div>
+   <p class="kort">En guidet gåtur rundt om foden af Le Morne-bjerget på ca. 3 timer. Bagefter frokost og badning på stranden.</p>
+   <ul class="fakta"><li>⏰ Start kl. 9</li><li>🥾 6,5 km</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <figure class="foto"><img src="img/le-morne-strand.jpg" alt="Palmer på Le Morne-stranden med bjerget bagved" loading="lazy" decoding="async" width="900" height="600"><figcaption>Le Morne-stranden. <a href="https://commons.wikimedia.org/wiki/File:Le_Morne_Beach_with_Le_Morne_Brabant_Mountain_in_the_background,_Mauritius_(53698223315).jpg" target="_blank" rel="noopener">Foto: dronepicr, CC BY 2.0</a></figcaption></figure>
+    <h4>Sådan ser dagen ud</h4>
+    <dl class="tider"><div><dt>Formiddag</dt><dd>Familievandretur med Explorers Mauritius kl. 9</dd></div><div><dt>Eftermiddag</dt><dd>Frokost og badning på Le Morne-stranden</dd></div></dl>
+    <h4>🥾 Turen</h4>
+    <p>6,5 km og 300 højdemeter på ca. 3 timer. Alle aldre kan være med. Ca. MUR 3.450 (ca. 490 kr.) pr. voksen og MUR 2.650 (ca. 370 kr.) pr. barn under 7.</p>
+    <div class="boks bedste"><h4>👵 Til bedsteforældrene</h4><p>Spring gerne gåturen over og vent på stranden, hvor der er skygge og rolig lagune.</p></div>
+    <div class="boks vejr"><h4>🌧️ Hvis det regner</h4><p>Så bytter vi med torsdag.</p></div>
+    <h4>🎒 Husk</h4><ul class="husk"><li>Sko med godt greb</li><li>1,5 l vand pr. person</li><li>Kasket</li><li>Myggespray</li><li>Badetøj</li></ul>
+    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Le+Morne+Public+Beach+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="https://explorersmauritius.com/services/le-morne-brabant-family-hike" target="_blank" rel="noopener">Om vandreturen ↗</a></div>
+   </div></details>
+  </article>
+
+  <article class="dag" id="dag-9" data-m="H" data-date="2026-11-12" data-titel="Pooldag ved huset">
+   <div class="dtop"><div class="kal"><span class="ug">Torsdag</span><span class="dn">12</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 9<span class="nu-tag">I dag</span></p><h3>🏊 Pooldag ved huset</h3></div></div>
+   <p class="kort">Ingen planer. Pool hele dagen efter tre aktive dage, og måske solnedgang på stranden i Flic en Flac.</p>
+   <ul class="fakta"><li>🏠 Hjemme</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <div class="boks vejr"><h4>🔄 Reservedag</h4><p>Er en af de andre ture blevet flyttet på grund af vejret, kommer den her.</p></div>
+   </div></details>
+  </article>
+
+  <article class="dag" id="dag-10" data-m="10" data-date="2026-11-13" data-titel="Sidste stranddag">
+   <div class="dtop"><div class="kal"><span class="ug">Fredag</span><span class="dn">13</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 10<span class="nu-tag">I dag</span></p><h3>🏖️ Sidste stranddag</h3></div></div>
+   <p class="kort">Strand og snorkling ved Le Morne om formiddagen. Om eftermiddagen pool og pakning, og grill om aftenen.</p>
+   <ul class="fakta"><li>🧳 Pakkedag</li><li>🔥 Grill</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <h4>Sådan ser dagen ud</h4>
+    <dl class="tider"><div><dt>Formiddag</dt><dd>Strand og snorkling på Le Morne public beach</dd></div><div><dt>Eftermiddag</dt><dd>Pool, kufferterne pakkes, og grill om aftenen</dd></div></dl>
+    <h4>🏝️ Stranden</h4>
+    <p>Den bedst anmeldte strand på vestkysten, med klart vand, hvidt sand, skygge og gratis parkering. Der er ofte skildpadder lige ud for stranden.</p>
+    <div class="boks vejr"><h4>⚠️ Pas på de mindste</h4><p>Nogle steder er strømmen stærkere. Det kan blæse meget, når der er mange kitesurfere.</p></div>
+    <h4>🎒 Husk</h4><ul class="husk"><li>Badetøj</li><li>Maske og snorkel</li><li>Pak kufferten</li></ul>
+    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Le+Morne+Public+Beach+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a></div>
+   </div></details>
+  </article>
+
+  <article class="dag" id="dag-11" data-m="11" data-date="2026-11-14" data-titel="Hjemrejse ad den smukke vej">
+   <div class="dtop"><div class="kal"><span class="ug">Lørdag</span><span class="dn">14</span><span class="mn">november</span></div>
+    <div><p class="dmeta">Dag 11<span class="nu-tag">I dag</span></p><h3>✈️ Hjemrejse ad den smukke vej</h3></div></div>
+   <p class="kort">Vi tjekker ud kl. 11 og kører mod lufthavnen forbi udsigten over Black River Gorges, to vandfald og de vilde klipper på sydkysten.</p>
+   <ul class="fakta"><li>⏰ Udtjek 11:00</li><li>✈️ Lufthavn ca. 19:30</li></ul>
+   <details class="mere"><summary><span class="vis">Mere info</span><span class="skjul">Vis mindre</span></summary><div class="indhold">
+    <div class="fotogrid">
+     <figure class="foto"><img src="img/gorges.jpg" alt="Udsigt over Black River Gorges" loading="lazy" decoding="async" width="900" height="503"><figcaption>Gorges Viewpoint. <a href="https://commons.wikimedia.org/wiki/File:Gorges_Viewpoint_(22937657943).jpg" target="_blank" rel="noopener">Foto: Lukas von Daeniken, CC BY-SA 2.0</a></figcaption></figure>
+     <figure class="foto"><img src="img/gris-gris.jpg" alt="Klipper og bølger ved Gris Gris" loading="lazy" decoding="async" width="900" height="660"><figcaption>Gris Gris. <a href="https://commons.wikimedia.org/wiki/File:Gris_gris.jpg" target="_blank" rel="noopener">Foto: public domain</a></figcaption></figure>
+    </div>
+    <h4>🛣️ Stop på vejen</h4>
+    <ol>
+     <li><b>Black River Gorges-udsigten og Alexandra Falls.</b> Gratis. Kun 3 minutters gang fra parkeringen, så alle kan være med. Lad være med at fodre aberne</li>
+     <li><b>Rochester Falls</b> ved Souillac. 10–15 minutters gang fra parkeringen. Sig nej tak til de "parkeringsvagter", der tilbyder sig</li>
+     <li><b>Gris Gris.</b> Vilde klipper og bølger. Her må man ikke bade</li>
+     <li><b>Mahébourg eller Blue Bay.</b> Sen frokost og aftensmad, 15 minutter fra lufthavnen</li>
+     <li><b>Lufthavnen</b> ca. kl. 19:30</li>
+    </ol>
+    <div class="boks vejr"><h4>🔒 Pas på bagagen</h4><p>Hold den ude af syne i bilerne, og parker, hvor der er mennesker.</p></div>
+    <h4>🎒 Husk</h4><ul class="husk"><li>Pas og billetter</li><li>Kontanter til parkering</li><li>Myggespray</li></ul>
+    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sir+Seewoosagur+Ramgoolam+International+Airport&amp;waypoints=Black+River+Gorges+Viewpoint%7CAlexandra+Falls+Mauritius%7CRochester+Falls+Mauritius%7CGris+Gris+Beach+Mauritius%7CBlue+Bay+Beach+Mauritius" target="_blank" rel="noopener">🧭 Hele ruten i Google Maps</a></div>
+   </div></details>
+  </article>
+
+ </div>
+</section>
+
+<section id="kortet" class="blok">
+ <h2>Hvor skal vi hen?</h2>
+ <p class="intro">Tryk på et nummer for at se dagen.</p>
+ <div class="kortboks">
+  <div class="kort">
+<svg viewBox="0 0 600 673" role="img" aria-label="Kort over Mauritius med ugens ture">
      <rect x="0" y="0" width="600" height="673" rx="18" class="hav"/>
      <path d="M40.4 566.6 L47.0 570.7 L54.1 560.8 L71.3 560.6 L88.5 590.9 L103.1 592.5 L108.8 583.3 L106.4 596.1 L154.0 619.6 L175.6 617.4 L186.1 607.5 L221.8 627.6 L259.7 631.6 L262.2 624.9 L273.8 634.7 L332.2 620.8 L371.3 598.8 L403.4 594.1 L432.4 579.3 L428.5 574.0 L461.8 548.2 L451.8 539.4 L470.8 545.1 L480.2 535.5 L482.1 523.7 L472.0 512.3 L466.5 516.2 L471.8 519.8 L472.5 523.9 L464.9 515.3 L462.0 496.4 L455.4 495.6 L458.0 500.2 L455.9 502.4 L445.1 488.5 L454.0 487.7 L454.4 460.0 L462.2 456.7 L466.7 470.4 L482.7 467.0 L500.3 441.4 L520.4 437.6 L520.0 423.4 L535.7 424.5 L524.5 416.9 L526.8 402.9 L537.9 395.6 L537.3 384.8 L529.3 379.4 L537.1 370.7 L531.2 359.8 L540.6 373.1 L550.9 370.8 L545.9 357.8 L555.5 344.6 L550.1 337.0 L556.6 325.7 L543.6 317.8 L566.9 304.3 L533.2 263.1 L528.3 233.1 L509.7 223.4 L514.9 230.6 L509.1 234.5 L496.6 223.4 L504.1 211.7 L494.4 205.0 L506.2 203.9 L514.2 188.4 L502.2 166.5 L463.0 156.9 L457.5 147.7 L464.6 141.8 L456.0 143.3 L452.5 131.9 L442.3 128.3 L437.4 112.7 L441.2 112.2 L432.6 108.8 L432.1 96.2 L436.3 100.5 L439.0 98.1 L433.7 96.2 L437.2 83.7 L429.4 79.8 L434.9 78.3 L433.7 67.3 L428.7 67.8 L426.3 64.8 L433.7 67.3 L435.6 55.4 L421.8 54.5 L403.6 41.5 L400.0 49.2 L381.9 37.2 L384.0 30.9 L359.0 24.2 L329.0 39.8 L323.5 53.7 L329.5 61.5 L314.8 61.9 L315.9 48.4 L296.8 45.1 L301.1 66.5 L285.7 91.0 L268.3 97.6 L254.7 129.5 L259.3 141.1 L251.0 151.7 L260.2 165.0 L244.4 171.9 L237.7 187.1 L248.1 203.3 L225.4 206.4 L241.1 216.2 L240.4 222.6 L243.6 220.5 L246.9 221.6 L236.9 227.9 L222.0 211.9 L212.3 241.6 L207.8 229.2 L170.1 240.5 L140.3 268.4 L138.5 287.7 L130.7 287.5 L123.1 299.0 L119.5 325.9 L98.0 369.3 L102.1 398.1 L114.8 407.9 L100.5 419.6 L94.9 441.9 L106.9 456.3 L115.7 456.5 L94.6 461.7 L93.6 470.5 L116.7 484.5 L102.4 489.8 L103.1 510.4 L78.1 544.9 L54.8 541.3 L58.9 533.7 L55.2 530.2 L40.4 566.6 Z" class="land"/>
      <circle cx="243.4" cy="225.5" r="3" class="by"/><text x="243" y="244" class="bytekst" text-anchor="middle">Port Louis</text>
@@ -300,235 +486,9 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
       <line x1="168.1" y1="521.6" x2="214" y2="474" class="leder"/><circle cx="168.1" cy="521.6" r="4" class="prik"/>
       <rect x="192" y="458" width="44" height="32" rx="16" class="boble"/><text x="214" y="480" text-anchor="middle" class="bobletekst">11</text></g>
     </svg>
-   </div>
-   <p id="korttekst" class="korttekst">Tryk på et nummer på kortet for at finde dagen. <strong>H</strong> er huset. Den gule linje er sidste dags tur mod lufthavnen, og den stiplede er katamaranturen.</p>
   </div>
-
-  <div class="dage" id="dagtabel">
-
-   <article class="dag" id="dag-1" data-m="1" data-date="2026-11-04" data-titel="Snorkling i lagunen">
-    <header class="dhead"><span class="nr">1</span><div><p class="dato">Onsdag 4. november</p><h3>🐠 Snorkling i lagunen</h3></div></header>
-    <dl class="tider">
-     <div><dt>Formiddag</dt><dd>Snorkling i lagunen ved Flic en Flac (20 min i bil)</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Pool og tidligt i seng</dd></div>
-    </dl>
-    <p class="note planb"><b>Hvis det blæser</b>Så bliver vi ved poolen. En stille start med roligt vand om morgenen.</p>
-    <p class="husk"><b>Husk:</b><span>Badetøj</span><span>Badesko</span><span>Maske og snorkel</span><span>Solcreme</span></p>
-    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Flic+en+Flac+Public+Beach+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a></div>
-   </article>
-
-   <article class="dag" id="dag-2" data-m="2" data-date="2026-11-05" data-titel="Fisketur">
-    <header class="dhead"><span class="nr">2</span><div><p class="dato">Torsdag 5. november</p><h3>🎣 Fisketur</h3></div></header>
-    <dl class="tider">
-     <div><dt>Tidlig morgen</dt><dd>Fisketur kl. 05:00 fra Grand Baie i nord. Vi kører hjemmefra ca. kl. 03:30 (ca. 1 t 15 min)</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Frokost, middagslur og pool. Ikke mere den dag</dd></div>
-    </dl>
-    <p class="note bedste"><b>Til dem, der bliver hjemme</b>Sov længe. Spørg kaptajnen, om vi må tage noget af fangsten med hjem til grillen.</p>
-    <p class="husk"><b>Husk:</b><span>Søsygepiller</span><span>Varm trøje til båden</span><span>Solcreme</span><span>Vand</span></p>
-    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Grand+Baie+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a></div>
-   </article>
-
-   <article class="dag" id="dag-3" data-m="3" data-date="2026-11-06" data-titel="Casela Nature Park">
-    <header class="dhead"><span class="nr">3</span><div><p class="dato">Fredag 6. november</p><h3>🦓 Casela Nature Park</h3></div></header>
-    <dl class="tider">
-     <div><dt>Formiddag</dt><dd>Casela Nature Park (15 min i bil). Vær der kl. 9, når de åbner</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Hjem ved 15-tiden og i poolen</dd></div>
-    </dl>
-    <p class="note bedste"><b>Hvorfor</b>En nem dag på land efter den tidlige morgen, med dyr og safari til børnene. Safarituren foregår fra en truck, så man skal ikke gå langt.</p>
-    <p class="husk"><b>Husk:</b><span>Kasket</span><span>Vand</span><span>Gode sko</span><span>Solcreme</span></p>
-    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Casela+Nature+Parks+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="#casela">Priser og åbningstider</a></div>
-   </article>
-
-   <article class="dag" id="dag-4" data-m="4" data-date="2026-11-07" data-titel="Katamaran til Île aux Bénitiers">
-    <header class="dhead"><span class="nr">4</span><div><p class="dato">Lørdag 7. november <span class="maerke">Ugens højdepunkt</span></p><h3>⛵ Katamaran til Île aux Bénitiers</h3></div></header>
-    <dl class="tider">
-     <div><dt>Formiddag</dt><dd>Privat katamaran med Océane fra L'Estuaire, et par minutter fra huset. Ud til delfinerne, snorkling, Crystal Rock og Île aux Bénitiers (ca. 6 timer, med frokost om bord)</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Hjem til pool og grill</dd></div>
-    </dl>
-    <p class="note planb"><b>Hvis havet er uroligt</b>Så bytter vi med søndag eller torsdag.</p>
-    <p class="husk"><b>Husk:</b><span>Badetøj</span><span>Badesko til øen</span><span>Håndklæde</span><span>Solcreme</span><span>Søsygepiller</span></p>
-    <div class="knapper"><a class="knap lys" href="#katamaran">Læs om turen</a></div>
-   </article>
-
-   <article class="dag" id="dag-5" data-m="58" data-date="2026-11-08" data-titel="Hviledag og Le Morne-stranden">
-    <header class="dhead"><span class="nr">5</span><div><p class="dato">Søndag 8. november</p><h3>🏖️ Hviledag og Le Morne-stranden</h3></div></header>
-    <dl class="tider">
-     <div><dt>Formiddag</dt><dd>Hviledag. Voksne, der har lyst, kan tage den guidede tur op på Le Morne-bjerget kl. 7 (3,5–4,5 timer, stejlt til sidst)</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Le Morne public beach og solnedgang</dd></div>
-    </dl>
-    <p class="note bedste"><b>Til bedsteforældrene</b>Stranden ved Le Morne har rolig lagune og skygge under træerne.</p>
-    <p class="husk"><b>Husk:</b><span>Vandresko og 1,5 l vand (toppen)</span><span>Badetøj</span><span>Myggespray ved solnedgang</span></p>
-    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Le+Morne+Public+Beach+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="#lemorne">Om Le Morne</a></div>
-   </article>
-
-   <article class="dag" id="dag-6" data-m="6" data-date="2026-11-09" data-titel="Dykning og snorkling">
-    <header class="dhead"><span class="nr">6</span><div><p class="dato">Mandag 9. november</p><h3>🤿 Dykning og snorkling i Flic en Flac</h3></div></header>
-    <dl class="tider">
-     <div><dt>Formiddag</dt><dd>Dykkedag hos Sundivers ved La Pirogue (20 min i bil). De to dykkere tager en genopfriskning i poolen og et guidet dyk. Hugo tager et børnedyk med en instruktør, og hans far er med. Resten af familien snorkler i den lave lagune lige ved siden af</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Strand og pool</dd></div>
-    </dl>
-    <p class="note bedste"><b>Til bedsteforældrene og Arthur</b>Lagunen ved Flic en Flac er lav og rolig. Arthur har redningsvest og maske på. Udstyr kan lejes på stranden.</p>
-    <p class="note planb"><b>Hvis havet er uroligt eller sigten dårlig</b>Så bytter vi med torsdag. Kom tidligt: poolen bruges kun til dykning før kl. 11.</p>
-    <p class="husk"><b>Husk:</b><span>Dykkercertifikat og logbog</span><span>Badetøj</span><span>Solcreme</span></p>
-    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sundivers+La+Pirogue+Flic+en+Flac" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="tel:+23059721504">📞 Ring til Sundivers</a><a class="knap lys" href="#dyk">Læs mere</a></div>
-   </article>
-
-   <article class="dag" id="dag-7" data-m="7" data-date="2026-11-10" data-titel="Buggy-safari i Bel Ombre">
-    <header class="dhead"><span class="nr">7</span><div><p class="dato">Tirsdag 10. november</p><h3>🚙 Buggy-safari i Bel Ombre</h3></div></header>
-    <dl class="tider">
-     <div><dt>Formiddag</dt><dd>Buggy-safari i Bel Ombre Nature Reserve kl. 9:30–11:30, med badestop ved et vandfald (ca. 50 min i bil, så vi kører ca. kl. 8:30)</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Frokost i Bel Ombre, så hjem til poolen</dd></div>
-    </dl>
-    <p class="note bedste"><b>Til bedsteforældrene</b>Kør med som passager, eller nyd kysten i Bel Ombre imens. Turen er ujævn og kan være mudret.</p>
-    <p class="note planb"><b>Hvis det regner kraftigt</b>Så bytter vi med fredag.</p>
-    <p class="husk"><b>Husk:</b><span>Lukkede sko</span><span>Tøj, der må blive beskidt</span><span>Badetøj til vandfaldet</span><span>Myggespray</span></p>
-    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Frederica+Nature+Reserve+Bel+Ombre+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="tel:+2302605101">📞 Ring til buggyturen</a><a class="knap lys" href="#buggy">Læs mere</a></div>
-   </article>
-
-   <article class="dag" id="dag-8" data-m="58" data-date="2026-11-11" data-titel="Familievandretur ved Le Morne">
-    <header class="dhead"><span class="nr">8</span><div><p class="dato">Onsdag 11. november</p><h3>⛰️ Familievandretur ved Le Morne</h3></div></header>
-    <dl class="tider">
-     <div><dt>Formiddag</dt><dd>Guidet familievandretur rundt om foden af Le Morne kl. 9 (6,5 km, ca. 3 timer)</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Frokost og badning på Le Morne-stranden</dd></div>
-    </dl>
-    <p class="note bedste"><b>Til bedsteforældrene</b>Spring gerne turen over og vent på stranden, hvor der er skygge og rolig lagune.</p>
-    <p class="note planb"><b>Hvis det regner</b>Så bytter vi med torsdag.</p>
-    <p class="husk"><b>Husk:</b><span>Vandresko</span><span>1,5 l vand pr. person</span><span>Kasket</span><span>Myggespray</span><span>Badetøj</span></p>
-    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Le+Morne+Public+Beach+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a><a class="knap lys" href="#lemorne">Læs mere</a></div>
-   </article>
-
-   <article class="dag" id="dag-9" data-m="H" data-date="2026-11-12" data-titel="Pooldag ved huset">
-    <header class="dhead"><span class="nr">9</span><div><p class="dato">Torsdag 12. november</p><h3>🏊 Pooldag ved huset</h3></div></header>
-    <dl class="tider">
-     <div><dt>Formiddag</dt><dd>Pool ved Villa Harmonia</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Pool. Måske solnedgang på stranden i Flic en Flac</dd></div>
-    </dl>
-    <p class="note planb"><b>Reservedag</b>Er en af de andre ture blevet flyttet pga. vejret, kommer den her.</p>
-    <p class="husk"><b>Husk:</b><span>Ingenting 🙂</span></p>
-   </article>
-
-   <article class="dag" id="dag-10" data-m="10" data-date="2026-11-13" data-titel="Le Morne-stranden og pakning">
-    <header class="dhead"><span class="nr">10</span><div><p class="dato">Fredag 13. november</p><h3>🏖️ Le Morne-stranden og pakning</h3></div></header>
-    <dl class="tider">
-     <div><dt>Formiddag</dt><dd>Strand og snorkling på Le Morne public beach</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Pool, kufferterne pakkes, og grill om aftenen</dd></div>
-    </dl>
-    <p class="note bedste"><b>Rolig sidste hele dag</b>Pas på de mindste: nogle steder ved stranden er strømmen stærkere.</p>
-    <p class="husk"><b>Husk:</b><span>Badetøj</span><span>Maske og snorkel</span><span>Pak kufferten</span></p>
-    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Le+Morne+Public+Beach+Mauritius" target="_blank" rel="noopener">🧭 Vis vej</a></div>
-   </article>
-
-   <article class="dag" id="dag-11" data-m="11" data-date="2026-11-14" data-titel="Hjemrejse via Gorges og sydkysten">
-    <header class="dhead"><span class="nr">11</span><div><p class="dato">Lørdag 14. november</p><h3>✈️ Hjemrejse via Gorges og sydkysten</h3></div></header>
-    <dl class="tider">
-     <div><dt>Formiddag</dt><dd>Udtjek kl. 11. Vi kører op gennem Black River Gorges, forbi udsigtspunktet og Alexandra Falls</dd></div>
-     <div><dt>Eftermiddag</dt><dd>Rochester Falls og Gris Gris, så sen frokost i Mahébourg eller ved Blue Bay. I lufthavnen ca. kl. 19:30</dd></div>
-    </dl>
-    <p class="note bedste"><b>Til bedsteforældrene</b>Der er kun 3 minutters gang fra parkeringen ud til udsigten ved Alexandra Falls. Ved Rochester Falls er der 10–15 minutters gang.</p>
-    <p class="note planb"><b>Pas på</b>Hold bagagen ude af syne i bilerne, og parker, hvor der er mennesker.</p>
-    <p class="husk"><b>Husk:</b><span>Pas og billetter</span><span>Kontanter til parkering</span><span>Myggespray</span></p>
-    <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sir+Seewoosagur+Ramgoolam+International+Airport&amp;waypoints=Black+River+Gorges+Viewpoint%7CAlexandra+Falls+Mauritius%7CRochester+Falls+Mauritius%7CGris+Gris+Beach+Mauritius%7CBlue+Bay+Beach+Mauritius" target="_blank" rel="noopener">🧭 Hele ruten i Google Maps</a><a class="knap lys" href="#sidste">Læs mere</a></div>
-   </article>
-
-  </div>
+  <p id="korttekst" class="korttekst"><strong>H</strong> er huset. Den gule linje er turen til lufthavnen på sidste dag, og den stiplede er katamaranturen.</p>
  </div>
-</section>
-
-<section id="aktiviteter" class="blok">
- <h2>Turene</h2>
- <p class="intro">Priserne er fra udbydernes egne sider. Kronebeløbene er cirka, regnet med MUR 100 ≈ 14 kr. Står der ingen pris, har de ikke lagt den ud.</p>
-
- <section class="akt" id="katamaran">
-  <header><span class="aktikon" aria-hidden="true">⛵</span><div><p class="tag">Lørdag 7/11</p><h3>Katamaran til Île aux Bénitiers</h3></div></header>
-  <figure class="foto"><img src="img/benitiers.jpg" alt="Île aux Bénitiers set ovenfra" loading="lazy" decoding="async" width="900" height="579"><figcaption>Île aux Bénitiers i lagunen ud for La Gaulette. <a href="https://commons.wikimedia.org/wiki/File:Ile_aux_Benitiers_2021.JPG" target="_blank" rel="noopener">Foto: Happolati, CC BY-SA 4.0</a></figcaption></figure>
-  <dl class="props">
-   <div><dt>Turen</dt><dd>Océane Cruises' private heldagstur fra L'Estuaire i Grande Rivière Noire, et par minutter fra huset. Vi sejler ud til delfinerne i Tamarin-bugten, snorkler, ser Crystal Rock og får 75 minutter på Île aux Bénitiers</dd></div>
-   <div><dt>Om bord</dt><dd>Grill, hummer og drikkevarer</dd></div>
-   <div><dt>Vejr</dt><dd>Er der høj sø eller kraftig vind, flytter vi turen til søndag eller torsdag. Husk badesko til øen</dd></div>
-  </dl>
-  <details class="mere"><summary>Anmeldelser og alternativ</summary><dl class="props">
-   <div><dt>Anmeldelser</dt><dd>Den private tur har 5,0 på TripAdvisor (13 anmeldelser), og selskabet har 4,8 (466). Folk roser besætningen, grillmaden og delfinerne tæt på båden. En familie på 16 kaldte det deres bedste dag på Mauritius. Til gengæld kan Île aux Bénitiers føles overrendt, og vandet ved øen er lavt</dd></div>
-   <div><dt>Alternativ</dt><dd>Catamaran Cruises' Nautitech 46 Fly fra La Balise har 5,0 på TripAdvisor (8 anmeldelser), bl.a. fra en familie med et barn på 8</dd></div>
-  </dl></details>
-  <div class="links"><a class="linkcard" href="https://www.tripadvisor.com.sg/AttractionProductReview-g293816-d20002766-Black_River_Full_day_Private_catamaran_to_Benitiers_island-Mauritius.html" target="_blank" rel="noopener"><span class="lt">Turen på TripAdvisor</span><span class="ls">tripadvisor.com.sg ↗</span></a><a class="linkcard" href="https://oceane.mu/" target="_blank" rel="noopener"><span class="lt">Océane Cruises</span><span class="ls">oceane.mu ↗</span></a></div>
- </section>
-
- <section class="akt" id="dyk">
-  <header><span class="aktikon" aria-hidden="true">🤿</span><div><p class="tag">Mandag 9/11</p><h3>Dykning i Flic en Flac</h3></div></header>
-  <figure class="foto"><img src="img/dyk.jpg" alt="Undervandsfoto fra et dyk ved Mauritius" loading="lazy" decoding="async" width="800" height="584"><figcaption>Under vandet ud for Mauritius. <a href="https://commons.wikimedia.org/wiki/File:Subacquea_Mauritius.jpg" target="_blank" rel="noopener">Foto: Patrizio Napolitano, CC BY-SA 2.5</a></figcaption></figure>
-  <dl class="props">
-   <div><dt>Stedet</dt><dd>Sundivers ved hotellet La Pirogue i Flic en Flac (ca. 20 min). Man behøver ikke bo på hotellet for at dykke med dem</dd></div>
-   <div><dt>De to dykkere</dt><dd>Begge har PADI Open Water, men det er et par år siden sidst, så dagen starter med en genopfriskning i poolen. Bagefter et guidet dyk på et let rev. Et dyk med udstyr koster MUR 3.500 (ca. 490 kr.) pr. person</dd></div>
-   <div><dt>Hugo (8)</dt><dd>Hugo tager et børnedyk i lavt vand med en instruktør, og far er med i vandet. Børn kan dykke fra 8 år</dd></div>
-   <div><dt>Medbring</dt><dd>Certifikat og logbog</dd></div>
-   <div><dt>Bemærk</dt><dd>Poolen bruges kun til dykning før kl. 11, så kom tidligt. Lukket søndag. Man må ikke flyve de første 24 timer efter et dyk</dd></div>
-  </dl>
-  <details class="mere"><summary>Anmeldelser og alternativ</summary><dl class="props">
-   <div><dt>Anmeldelser</dt><dd>4,8 på TripAdvisor (532 anmeldelser). Folk skriver om tålmodige instruktører, fokus på sikkerhed og udstyr i god stand</dd></div>
-   <div><dt>Alternativ</dt><dd>ScubaCaribe ved RIU Créole på Le Morne har PADI Bubblemaker for 8–10 år til ca. MUR 3.150 (ca. 440 kr.). 4,6 på TripAdvisor (337)</dd></div>
-  </dl></details>
-  <div class="links"><a class="linkcard" href="tel:+23059721504"><span class="lt">📞 Ring til Sundivers</span><span class="ls">+230 5972 1504</span></a><a class="linkcard" href="https://www.sundiversmauritius.com/learn-diving-in-mauritius/price-list-2/" target="_blank" rel="noopener"><span class="lt">Sundivers: priser</span><span class="ls">sundiversmauritius.com ↗</span></a><a class="linkcard" href="https://www.tripadvisor.com/Attraction_Review-g298343-d2641839-Reviews-Sundivers-Flic_En_Flac.html" target="_blank" rel="noopener"><span class="lt">Sundivers: anmeldelser</span><span class="ls">tripadvisor.com ↗</span></a></div>
- </section>
-
- <section class="akt" id="buggy">
-  <header><span class="aktikon" aria-hidden="true">🚙</span><div><p class="tag">Tirsdag 10/11</p><h3>Buggy i Bel Ombre Nature Reserve</h3></div></header>
-  <dl class="props">
-   <div><dt>Turen</dt><dd>Buggy Discovery Trail i Bel Ombre Nature Reserve (Frédérica). Gennem skov og sukkerrørsmarker forbi ruinerne af en gammel sukkermølle, med badestop ved L'Exemple-vandfaldet</dd></div>
-   <div><dt>Pris</dt><dd>Fra ca. MUR 7.950 (ca. 1.120 kr.) pr. buggy med 2 sæder</dd></div>
-   <div><dt>Varighed</dt><dd>Ca. 2 timer. Hver dag kl. 9:30 og 13:30</dd></div>
-   <div><dt>Alder</dt><dd>Føreren skal være 18, og passagerer mindst 5 år. Hugo og Arthur kan begge køre med ved siden af en voksen</dd></div>
-   <div><dt>Kontakt</dt><dd>+230 260 5101 eller econciergerie@heritageresorts.mu. Turen kan blive aflyst ved dårligt vejr</dd></div>
-  </dl>
-  <details class="mere"><summary>Anmeldelser og alternativ</summary><dl class="props">
-   <div><dt>Anmeldelser</dt><dd>4,9 på TripAdvisor (221 anmeldelser). Folk er vilde med guiderne og badet under vandfaldet, og mange så hjorte og vildsvin. Turen er ujævn, mudret og støvet, og nogle syntes, den var for kort</dd></div>
-   <div><dt>Hvorfor ikke quad?</dt><dd>Passagerer på en quad skal være 12 år, så drengene kan ikke komme med</dd></div>
-   <div><dt>Alternativ</dt><dd>La Vallée des Couleurs har også buggy med passagerer fra 6 år og mindst 1,20 m, men entréen til parken kommer oveni</dd></div>
-  </dl></details>
-  <div class="links"><a class="linkcard" href="https://heritageresorts.mu/plan-stay-mauritius/buggy-bel-ombre-nature-reserve" target="_blank" rel="noopener"><span class="lt">Buggy i Bel Ombre</span><span class="ls">heritageresorts.mu ↗</span></a><a class="linkcard" href="https://www.tripadvisor.com/AttractionProductReview-g293816-d27127756-Mauritius_2_Hours_Buggy_Ride_Bel_Ombre_Nature_Reserve-Mauritius.html" target="_blank" rel="noopener"><span class="lt">Buggyturen: anmeldelser</span><span class="ls">tripadvisor.com ↗</span></a></div>
- </section>
-
- <section class="akt" id="lemorne">
-  <header><span class="aktikon" aria-hidden="true">⛰️</span><div><p class="tag">Søndag 8/11 og onsdag 11/11</p><h3>Le Morne</h3></div></header>
-  <div class="fotogrid">
-   <figure class="foto"><img src="img/le-morne-luft.jpg" alt="Le Morne-halvøen og bjerget Le Morne Brabant set fra luften" loading="lazy" decoding="async" width="900" height="600"><figcaption>Le Morne Brabant set fra luften. <a href="https://commons.wikimedia.org/wiki/File:Le_Morne_Peninsula_in_Mauritius_(53697779236).jpg" target="_blank" rel="noopener">Foto: dronepicr, CC BY 2.0</a></figcaption></figure>
-   <figure class="foto"><img src="img/le-morne-strand.jpg" alt="Palmer på Le Morne-stranden med bjerget bagved" loading="lazy" decoding="async" width="900" height="600"><figcaption>Le Morne-stranden. <a href="https://commons.wikimedia.org/wiki/File:Le_Morne_Beach_with_Le_Morne_Brabant_Mountain_in_the_background,_Mauritius_(53698223315).jpg" target="_blank" rel="noopener">Foto: dronepicr, CC BY 2.0</a></figcaption></figure>
-  </div>
-  <dl class="props">
-   <div><dt>Familietur (ons)</dt><dd>Explorers Mauritius' tur rundt om foden af Le Morne starter kl. 9: 6,5 km og 300 højdemeter på ca. 3 timer. Ca. MUR 3.450 (ca. 490 kr.) pr. voksen og MUR 2.650 (ca. 370 kr.) pr. barn under 7</dd></div>
-   <div><dt>Toppen (søn)</dt><dd>Guidet tur på 3,5–4,5 timer. Det sidste stykke er stejl klatring, som børn under 13 ikke må. Kun for friske voksne. Ca. MUR 2.400–4.000 (ca. 340–560 kr.)</dd></div>
-   <div><dt>Bedste tid</dt><dd>Tidligt, før varmen og skyerne. Sko med godt greb og 1,5 l vand pr. person</dd></div>
-   <div><dt>Bedsteforældre</dt><dd>Kan vente på Le Morne public beach, hvor lagunen er rolig, og der er skygge under træerne</dd></div>
-  </dl>
-  <details class="mere"><summary>Om stranden</summary><dl class="props">
-   <div><dt>Stranden</dt><dd>Den bedst anmeldte strand på vestkysten: 4,5 på TripAdvisor (738) og 4,6 på Google (2.597). Klart vand, hvidt sand, skygge, gratis parkering og skildpadder lige ud for stranden. Nogle steder er strømmen stærkere, så hold øje med de mindste. Det kan blæse meget, og der mangler tit papir på toiletterne</dd></div>
-  </dl></details>
-  <div class="links"><a class="linkcard" href="https://explorersmauritius.com/services/le-morne-brabant-family-hike" target="_blank" rel="noopener"><span class="lt">Familievandreturen</span><span class="ls">explorersmauritius.com ↗</span></a><a class="linkcard" href="https://mauritius-fun-tours.com/en/guides/le-morne-brabant-guided-hike/" target="_blank" rel="noopener"><span class="lt">Guidede ture til toppen</span><span class="ls">mauritius-fun-tours.com ↗</span></a></div>
- </section>
-
- <section class="akt" id="casela">
-  <header><span class="aktikon" aria-hidden="true">🦓</span><div><p class="tag">Fredag 6/11</p><h3>Casela Nature Park</h3></div></header>
-  <figure class="foto"><img src="img/casela-zebraer.jpg" alt="Zebraer på savannen i Casela" loading="lazy" decoding="async" width="900" height="299"><figcaption>Zebraer i Casela. <a href="https://commons.wikimedia.org/wiki/File:Zebras_in_Casela_Nature_Parks,_Mauritius.jpg" target="_blank" rel="noopener">Foto: 7oanna, CC BY-SA 4.0</a></figcaption></figure>
-  <dl class="props">
-   <div><dt>Billet</dt><dd>Casela Special: adgang plus safaritruck, Tulawaka og så mange Pangia-ture, man vil</dd></div>
-   <div><dt>Pris</dt><dd>MUR 1.600 (ca. 220 kr.) pr. voksen og MUR 1.300 (ca. 180 kr.) pr. barn på 4–12 år. Farm Special, hvor man også fodrer dyr, koster MUR 2.100 / 1.860 (ca. 290 / 260 kr.)</dd></div>
-   <div><dt>Åbent</dt><dd>Kl. 9–17. Aktiviteterne med dyr slutter kl. 15:30, og restauranterne lukker kl. 16</dd></div>
-  </dl>
-  <div class="links"><a class="linkcard" href="https://caselaparks.com/" target="_blank" rel="noopener"><span class="lt">Casela Nature Parks</span><span class="ls">caselaparks.com ↗</span></a></div>
- </section>
-
- <section class="akt" id="sidste">
-  <header><span class="aktikon" aria-hidden="true">🌿</span><div><p class="tag">Lørdag 14/11</p><h3>Sidste dag: Gorges og sydkysten</h3></div></header>
-  <div class="fotogrid">
-   <figure class="foto"><img src="img/gorges.jpg" alt="Udsigt over Black River Gorges" loading="lazy" decoding="async" width="900" height="503"><figcaption>Udsigten fra Gorges Viewpoint. <a href="https://commons.wikimedia.org/wiki/File:Gorges_Viewpoint_(22937657943).jpg" target="_blank" rel="noopener">Foto: Lukas von Daeniken, CC BY-SA 2.0</a></figcaption></figure>
-   <figure class="foto"><img src="img/gris-gris.jpg" alt="Klipper og bølger ved Gris Gris" loading="lazy" decoding="async" width="900" height="660"><figcaption>Gris Gris, hvor man ikke må bade. <a href="https://commons.wikimedia.org/wiki/File:Gris_gris.jpg" target="_blank" rel="noopener">Foto: public domain</a></figcaption></figure>
-  </div>
-  <dl class="props">
-   <div><dt>Gorges og Alexandra Falls</dt><dd>Gratis. Kun 3 minutters gang fra parkeringen til udsigten, så alle kan komme med. 20 minutter er nok. Lad være med at fodre aberne</dd></div>
-   <div><dt>Rochester Falls</dt><dd>Ved Souillac, gratis, 10–15 minutters gang fra parkeringen. Sig nej tak til de "parkeringsvagter", der tilbyder sig</dd></div>
-   <div><dt>Gris Gris</dt><dd>Vilde klipper og bølger. Her må man ikke bade</dd></div>
-   <div><dt>Mad og lufthavn</dt><dd>Sen frokost og aftensmad i Mahébourg eller ved Blue Bay, 15 minutter fra lufthavnen. I lufthavnen ca. kl. 19:30</dd></div>
-  </dl>
- </section>
 </section>
 
 <section id="praktisk" class="blok">
@@ -536,35 +496,34 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
 
  <div class="noed">
   <h3>🚑 Hvis noget går galt</h3>
-  <p>Ring til ambulance på <strong>114</strong> og politi på <strong>999</strong>. Mauritius er 3 timer foran Danmark.</p>
-  <div class="knapper"><a class="knap" href="tel:114">📞 Ambulance 114</a><a class="knap" href="tel:999">📞 Politi 999</a></div>
+  <p>Ambulance: <strong>114</strong>. Politi: <strong>999</strong>.</p>
+  <div class="knapper"><a class="knap" href="tel:114">📞 Ring 114</a><a class="knap" href="tel:999">📞 Ring 999</a></div>
  </div>
 
  <div class="hus">
   <h3>🏠 Huset</h3>
-  <p>Villa Harmonia, Plantation Marguery, Black River (Rivière Noire).</p>
-  <div class="knapper"><a class="knap" href="https://www.google.com/maps/search/?api=1&amp;query=Plantation+Marguery+Black+River+Mauritius" target="_blank" rel="noopener">🗺️ Vis på kort</a><a class="knap lys" href="https://www.google.com/maps/dir/?api=1&amp;destination=Plantation+Marguery+Black+River+Mauritius" target="_blank" rel="noopener">🧭 Vej hjem</a></div>
+  <p>Villa Harmonia, Plantation Marguery, Black River.</p>
+  <div class="knapper"><a class="knap" href="https://www.google.com/maps/dir/?api=1&amp;destination=Plantation+Marguery+Black+River+Mauritius" target="_blank" rel="noopener">🧭 Vej hjem</a></div>
  </div>
 
  <ul class="tips">
-  <li><span class="ti" aria-hidden="true">🌊</span><div><strong>Havet om morgenen</strong><span>I november er vestkysten roligst om morgenen, og vandet er 25–28 °C. Snorkl inden for revet, og hold jer fra revpassagerne og der, hvor bådene sejler.</span></div></li>
-  <li><span class="ti" aria-hidden="true">☀️</span><div><strong>Sol</strong><span>Solen er meget stærk mellem kl. 11 og 15. Revvenlig solcreme, kasket, UV-trøjer til børnene og masser af vand.</span></div></li>
-  <li><span class="ti" aria-hidden="true">🩴</span><div><strong>Sko</strong><span>Badesko pga. koraller og søpindsvin. Vandresko til Le Morne og Gorges.</span></div></li>
-  <li><span class="ti" aria-hidden="true">🚗</span><div><strong>Venstrekørsel</strong><span>Der køres i venstre side. Pas på scootere, fodgængere og hunde, og kør helst ikke i mørke. Solen går ned omkring kl. 18:30.</span></div></li>
-  <li><span class="ti" aria-hidden="true">💵</span><div><strong>Kontanter</strong><span>Hav nogle rupees på jer til parkering, kokosnødder, strandsælgerne og drikkepenge. MUR 100 ≈ 14 kr. (kurs 3. november 2026).</span></div></li>
-  <li><span class="ti" aria-hidden="true">🔌</span><div><strong>Stikkontakter</strong><span>Der er både europæiske og britiske (tre ben) stikkontakter. Tag en adapter med.</span></div></li>
+  <li><span class="ti" aria-hidden="true">☀️</span><div><strong>Solen er stærk</strong><span>Især kl. 11–15. Solcreme, kasket og masser af vand.</span></div></li>
+  <li><span class="ti" aria-hidden="true">🌊</span><div><strong>Havet er roligst om morgenen</strong><span>Snorkl inden for revet, og hold jer fra bådene.</span></div></li>
+  <li><span class="ti" aria-hidden="true">🩴</span><div><strong>Badesko</strong><span>Koraller og søpindsvin kan skære. Vandresko til Le Morne.</span></div></li>
+  <li><span class="ti" aria-hidden="true">🚗</span><div><strong>Venstrekørsel</strong><span>Pas på scootere og hunde. Det bliver mørkt ca. kl. 18:30.</span></div></li>
+  <li><span class="ti" aria-hidden="true">💵</span><div><strong>Penge</strong><span>MUR 100 ≈ 14 kr. Hav kontanter til parkering og strandsælgere.</span></div></li>
+  <li><span class="ti" aria-hidden="true">🕒</span><div><strong>Tid</strong><span>Mauritius er 3 timer foran Danmark.</span></div></li>
+  <li><span class="ti" aria-hidden="true">🔌</span><div><strong>Stikkontakter</strong><span>Både europæiske og britiske. Tag en adapter med.</span></div></li>
   <li><span class="ti" aria-hidden="true">🦟</span><div><strong>Myg</strong><span>Myggespray i skoven og når solen går ned.</span></div></li>
-  <li><span class="ti" aria-hidden="true">🤢</span><div><strong>Søsyge</strong><span>Tag søsygepiller en halv time før fisketuren og katamaranen, hvis I er tilbøjelige til det.</span></div></li>
  </ul>
 </section>
 
 <section id="mad" class="blok">
  <h2>Mad</h2>
  <ul class="rows">
-  <li><strong>Yass Dholl Puri, Grande Rivière Noire</strong><span>Lokal street food-morgenmad tæt på huset. Åbner kl. 5, og man skal komme tidligt.</span></li>
-  <li><strong>Baz Lokal, La Preneuse</strong><span>Hjemmelavet mauritisk mad, og de kan sagtens tage en stor flok.</span></li>
-  <li><strong>Fisk fra torsdagens tur</strong><span>Spørg kaptajnen, om vi må tage noget af fangsten med hjem på grillen.</span></li>
-  <li><strong>Smag</strong><span>Dholl puri, gâteaux piments, alouda, mine frit og frisk ananas med chili fra strandsælgerne.</span></li>
+  <li><strong>Yass Dholl Puri, Grande Rivière Noire</strong><span>Lokal morgenmad tæt på huset. Åbner kl. 5. Kom tidligt.</span></li>
+  <li><strong>Baz Lokal, La Preneuse</strong><span>Hjemmelavet mauritisk mad. Plads til en stor flok.</span></li>
+  <li><strong>Smag på</strong><span>Dholl puri, gâteaux piments, alouda, mine frit og frisk ananas med chili.</span></li>
  </ul>
 </section>
 
@@ -572,7 +531,7 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
 
 <footer>
  <p>Mauritius, 4.–14. november 2026. Fotos fra Wikimedia Commons, krediteret ved hvert billede.</p>
- <p><button type="button" class="knap lys" onclick="window.print()">🖨️ Udskriv planen</button></p>
+ <p><button type="button" class="knap lys" id="print">🖨️ Udskriv planen</button></p>
 </footer>
 
 <a href="#top" class="knap optop" id="optop" aria-label="Til toppen af siden">↑<span class="ord"> Til toppen</span></a>
@@ -599,40 +558,27 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
   catch(e){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
  }
  var dage=Array.prototype.slice.call(document.querySelectorAll('#dagtabel .dag'));
- var boks=document.getElementById('idag');
- var dato=iDag();
- var foerste=dage[0].dataset.date,sidste=dage[dage.length-1].dataset.date;
- function dageMellem(a,b){return Math.round((Date.parse(b)-Date.parse(a))/864e5)}
- function kopi(d){
-  var c=d.cloneNode(true);c.removeAttribute('id');c.removeAttribute('data-m');
-  c.querySelectorAll('.maerke').forEach(function(m){m.remove()});
-  return c;
- }
- var h=boks.querySelector('h2'),p=boks.querySelector('.ur');
+ var boks=document.getElementById('idag'),h=boks.querySelector('h2'),p=boks.querySelector('.ur');
+ var dato=iDag(),foerste=dage[0].dataset.date,sidste=dage[dage.length-1].dataset.date;
+ function kopi(d){var c=d.cloneNode(true);c.removeAttribute('id');c.removeAttribute('data-m');return c}
  if(dato<foerste){
-  var n=dageMellem(dato,foerste);
+  var n=Math.round((Date.parse(foerste)-Date.parse(dato))/864e5);
   h.textContent=n===1?'Vi starter i morgen!':'Om '+n+' dage starter turen';
-  p.textContent='Første dag er onsdag 4. november. Sådan ser den ud:';
+  p.textContent='Sådan ser første dag ud:';
   boks.appendChild(kopi(dage[0]));
  }else if(dato>sidste){
   h.textContent='Tak for turen!';
-  p.textContent='Vi håber, I havde det dejligt. Hele planen ligger stadig herunder.';
+  p.textContent='Hele planen ligger stadig herunder.';
  }else{
   var i=dage.findIndex(function(d){return d.dataset.date===dato});
   if(i>-1){
-   var d=dage[i];
-   d.classList.add('nu');
-   var lnk=document.querySelector('#dagvalg a[href="#'+d.id+'"]');if(lnk)lnk.classList.add('nu');
+   var d=dage[i];d.classList.add('nu');
+   var l=document.querySelector('#ugeliste a[href="#'+d.id+'"]');if(l)l.classList.add('nu');
    h.textContent='I dag';
    p.textContent='Dag '+(i+1)+' af '+dage.length+' på Mauritius.';
    var c=kopi(d);c.classList.add('nu');boks.appendChild(c);
    var nx=dage[i+1];
-   if(nx){
-    var m=document.createElement('p');m.className='imorgen';
-    m.innerHTML='I morgen: <a href="#'+nx.id+'"></a>';
-    m.querySelector('a').textContent=nx.dataset.titel+' →';
-    boks.appendChild(m);
-   }
+   if(nx){var m=document.createElement('p');m.className='imorgen';m.innerHTML='I morgen: <a href="#'+nx.id+'"></a>';m.querySelector('a').textContent=nx.dataset.titel+' →';boks.appendChild(m)}
   }
  }
 
@@ -645,20 +591,22 @@ footer{text-align:center;color:var(--ink3);font-size:.85rem;padding:20px 16px 90
   dage.forEach(function(d){var on=d.dataset.m===m;d.classList.toggle('on',on);if(on&&!first)first=d});
   var k=document.querySelector('.mk[data-m="'+m+'"]');
   if(k)txt.textContent=k.dataset.t;else txt.innerHTML=std;
-  if(scroll&&first){
-   var r=first.getBoundingClientRect();
-   if(window.innerWidth<1000||r.top<90||r.bottom>window.innerHeight)first.scrollIntoView({behavior:'smooth',block:'center'});
-  }
+  if(scroll&&first)first.scrollIntoView({behavior:'smooth',block:'start'});
  }
  mks.forEach(function(k){
   function go(){vaelg(cur===k.dataset.m?'':k.dataset.m,true)}
   k.addEventListener('click',go);
   k.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}});
  });
- dage.forEach(function(d){d.addEventListener('click',function(e){if(e.target.closest('a,button'))return;vaelg(d.dataset.m,false)})});
- document.querySelectorAll('#dagvalg a').forEach(function(a){
+ document.querySelectorAll('#ugeliste a').forEach(function(a){
   a.addEventListener('click',function(){var d=document.querySelector(a.getAttribute('href'));if(d)vaelg(d.dataset.m,false)});
  });
+
+ /* Udskriv med alle detaljer åbne */
+ var lukket=[];
+ window.addEventListener('beforeprint',function(){lukket=[];document.querySelectorAll('details.mere:not([open])').forEach(function(x){x.open=true;lukket.push(x)})});
+ window.addEventListener('afterprint',function(){lukket.forEach(function(x){x.open=false})});
+ document.getElementById('print').addEventListener('click',function(){window.print()});
 
  /* Til toppen */
  var op=document.getElementById('optop');
